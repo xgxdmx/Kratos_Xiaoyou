@@ -250,25 +250,25 @@ a,
     animation: shake 1s infinite;
 }
 /*!*表情框抖动*!*/
-/*.pl{*/
-    /*font-size: 5px;*/
-    /*color: #888;*/
-/*}*/
-/*.pl:hover{*/
-    /*-webkit-animation: shake 0.5s infinite;*/
-    /*animation: shake 0.5s infinite;*/
-    /*background-color: #FFFFFF;*/
-    /*color: #444;*/
-/*}*/
+.pl{
+    font-size: 5px;
+    color: #888;
+}
+.pl:hover{
+    -webkit-animation: shake 0.5s infinite;
+    animation: shake 0.5s infinite;
+    background-color: #FFFFFF;
+    color: #444;
+}
 /*!*颜表情*!*/
-/*#OwO-body{*/
-    /*display: none;*/
-    /*float: left;*/
-    /*border: 1px solid #fff;*/
-/*}*/
-/*#OwO-body li{*/
-    /*cursor: pointer;*/
-/*}*/
+#OwO-body{
+    display: none;
+    float: left;
+    border: 1px solid #fff;
+}
+#OwO-body li{
+    cursor: pointer;
+}
 .input-div{
     float: right;
 }
@@ -277,4 +277,3 @@ a,
     list-style:none;
     margin-left: 20%;
 }
-

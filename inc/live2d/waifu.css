@@ -1,12 +1,13 @@
 .waifu {
     cursor: url(move.cur), default;
     position: fixed;
-    bottom:0;
+/*    bottom:0;*/
     margin-bottom: -28px;
     z-index: 1;
     font-size: 0;
     -webkit-transform: translateY(3px);
     transform: translateY(3px);
+    bottom: 15px;
 }
 .waifu:hover {
     -webkit-transform: translateY(0);
@@ -32,7 +33,7 @@
 .waifu-tool {
     display: none;
     color: #aaa;
-    top: 100px;
+    top: 55px;
     left: 30px;
     position: absolute;
 }

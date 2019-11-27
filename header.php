@@ -56,6 +56,8 @@ if($_COOKIE['goto_bibo']==1){
     <meta name="twitter:description" content="<?php kratos_description(); ?>">
     <meta name="twitter:card" content="summary">
     <!-- 允许访问站外资源 -->
+    <script src="https://kit.fontawesome.com/67c50fd13a.js" crossorigin="anonymous"></script>
+    <script data-ad-client="ca-pub-9730350034584210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!--仅同源网站发送请求-->
     <meta name="referrer" content="same-origin">
     <?php if (is_archive() && ($paged > 1) && ($paged < $wp_query->max_num_pages)) { ?>
@@ -145,6 +147,7 @@ if($_COOKIE['goto_bibo']==1){
     <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/bootstrap.min.css';?>"/>
     <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/pages/';?>bilibililive/style/style.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <script src="https://kit.fontawesome.com/67c50fd13a.js" crossorigin="anonymous"></script>
     <title><?php wp_title('-',true,'right'); ?></title>
     <?php wp_head();wp_print_scripts('theme-jq'); ?>
     <style><?php

@@ -5,13 +5,13 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 footer-list text-center">
                     <p class="kratos-social-icons"><?php
-                        echo (!kratos_option('social_weibo'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_weibo').'"><i class="fa fa-weibo"></i></a>';
-                        echo (!kratos_option('social_tweibo'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_tweibo').'"><i class="fa fa-tencent-weibo"></i></a>';
-                        echo (!kratos_option('social_mail'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_mail').'"><i class="fa fa-envelope"></i></a>';
-                        echo (!kratos_option('social_twitter'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_twitter').'"><i class="fa fa-twitter"></i></a>';
-                        echo (!kratos_option('social_facebook'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_facebook').'"><i class="fa fa-facebook-official"></i></a>';
+                        echo (!kratos_option('social_weibo'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_weibo').'"><i class="fab fa-weibo"></i></a>';
+                        echo (!kratos_option('social_tweibo'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_tweibo').'"><i class="fab fa-tencent-weibo"></i></a>';
+                        echo (!kratos_option('social_mail'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_mail').'"><i class="fas fa-envelope"></i></a>';
+                        echo (!kratos_option('social_twitter'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_twitter').'"><i class="fab fa-twitter"></i></a>';
+                        echo (!kratos_option('social_facebook'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_facebook').'"><i class="fab fa-facebook-official"></i></a>';
                         echo (!kratos_option('social_linkedin'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_linkedin').'"><i class="fa fa-linkedin-square"></i></a>';
-                        echo (!kratos_option('social_github'))?'':'<a class="github-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_github').'"><i class="fa fa-github"></i></a>';
+                        echo (!kratos_option('social_github'))?'':'<a class="github-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_github').'"><i class="fab fa-github"></i></a>';
                         echo (!kratos_option('show_rss'))?'':'<a class="rss-tip" title="RSS订阅" target="_blank" rel="nofollow" href="';
                         if(kratos_option('show_rss')){ bloginfo('url');
                             echo '/feed"><i class="fa fa-rss"></i></a>';}
@@ -48,9 +48,9 @@
                 <?php if(kratos_option('bibo_pagelink')){?>
                     <div class="bilbili-box">
                         <?php if($_COOKIE['goto_bibo']==1){?>
-                            <a href="<?php echo site_url();?>?style=krato"> <span class="fa fa-exchange"  title="切换风格"></span></a>
+                            <a href="<?php echo site_url();?>?style=krato"> <span class="fas fa-exchange-alt"  title="切换风格"></span></a>
                         <?php }else{?>
-                            <a href="<?php echo site_url();?>?style=bibo"> <span class="fa fa-exchange"  title="切换风格"></span></a>
+                            <a href="<?php echo site_url();?>?style=bibo"> <span class="fas fa-exchange-alt"  title="切换风格"></span></a>
                         <?php }?>
                     </div>
                 <?php } ?>
