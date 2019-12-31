@@ -3,7 +3,7 @@
     <div id="footer"<?php echo ' style="background:rgba('.kratos_option('footer_color').')"'; ?>>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                <div class="col-md-12 footer-list text-center">
                     <p class="kratos-social-icons"><?php
                         echo (!kratos_option('social_weibo'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_weibo').'"><i class="fab fa-weibo"></i></a>';
                         echo (!kratos_option('social_tweibo'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_tweibo').'"><i class="fab fa-tencent-weibo"></i></a>';

@@ -662,10 +662,10 @@ a.comment-reply-link,a.comment-reply-login{text-decoration:none;padding:2px 5px;
 #respond .comment-notes,#respond .logged-in-as{margin:0 0 10px;color:#888}
 #respond .input-group-addon{padding:6px 8px}
 #respond .input-group-addon i{width:20px}
-#respond .comment .form-control{border-radius:10px;background:url(../images/comment.png) right bottom no-repeat;background-size: 150px 100px;color:#000000;}
+#respond .comment .form-control{width:100%;border-radius:10px;background:url(../images/comment.png) right bottom no-repeat;background-size: 150px 100px;color:#000000;}
 #respond .form-control{box-shadow:none;;border:1px solid #ccc;height:auto;font-size:17px;font-weight:500;max-width: 97%}
 #respond .has-feedback{position:relative}
-#respond .has-feedback .form-control:not(:first-child){padding-right:30px;max-width: 97%}
+#respond .has-feedback .form-control:not(:first-child){padding-right:30px;width:100%;max-width: 97%}
 #respond .form-control-feedback{position:absolute;right:0;z-index:2;display:block;width:34px;height:34px;text-align:center;pointer-events:none}
 #respond .must-log-in,.must-log-in a{color:#555}
 #comments img{max-width:100%}
@@ -964,7 +964,7 @@ cite.fn{padding-left:39px}
 .widget_links img{width:25px;height:25px;margin-top:-3px;border-radius:50%}
 .cd-tool>div{position:fixed;right:20px;z-index:999}
 .cd-tool span{display:table-cell;vertical-align:middle;color:#fff;width:40px;height:40px;font-size:18px}
-.edit-box{bottom:130px;background:#848484;opacity:.7}
+.edit-box{bottom:80px;right:52px;margin-right:52px;background:#848484;opacity:7;width:40px;height:40px}
 .edit-box.edit-box2{bottom:180px}
 .gotop-box{bottom:80px;visibility:hidden;opacity:0;-webkit-transition:.5s;transition:.5s}
 .gotop-box.gotop-box2{bottom:130px}

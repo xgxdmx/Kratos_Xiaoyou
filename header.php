@@ -23,7 +23,7 @@ if(kratos_option('bibo_pagelink')) {
         }
     }
     /*这里传入get请求，用于切换博客风格*/
-    //if($_REQUEST["style"]=='bibo'){header("location:".kratos_option('bibo_pagelink'));if(isset($_COOKIE['goto_bibo'])){unset($_COOKIE['goto_bibo']);setcookie('goto_bibo',1);}else{setcookie('goto_bibo',1);}exit;}
+
     if ($_REQUEST["style"] == 'bibo') {
         header("location:" . kratos_option('bibo_pagelink'));
         setcookie('goto_bibo', 1);
@@ -56,21 +56,20 @@ if($_COOKIE['goto_bibo']==1){
     <meta name="twitter:description" content="<?php kratos_description(); ?>">
     <meta name="twitter:card" content="summary">
     <!-- 允许访问站外资源 -->
-    <script src="https://kit.fontawesome.com/67c50fd13a.js" crossorigin="anonymous"></script>
-    <script data-ad-client="ca-pub-9730350034584210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
     <!--仅同源网站发送请求-->
     <meta name="referrer" content="same-origin">
-    <?php if (is_archive() && ($paged > 1) && ($paged < $wp_query->max_num_pages)) { ?>
+<!--     <?php if (is_archive() && ($paged > 1) && ($paged < $wp_query->max_num_pages)) { ?>
     <link rel=”prefetch” href=”<?php echo get_next_posts_page_link(); ?>”>
     <link rel=”prerender” href=”<?php echo get_next_posts_page_link(); ?>”>
-    <?php } ?>
+    <?php } ?> -->
     <link rel="icon" type="image/x-icon" href="<?php echo kratos_option('site_ico'); ?>">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
     <title><?php wp_title('-',true,'right'); ?></title>
     <?php wp_head();wp_print_scripts('theme-jq'); ?>
     <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/inc/live2d/waifu.css';?>"/>
-    <link rel="stylesheet" href="<?php echo  bloginfo('template_url').'/pages/';?>bilibililive/style/style.css" type="text/css">
-    <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/pages/';?>bilibililive/style/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@1.1/css/pages/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@1.1/css/pages/main.css">
     <style>
         #offcanvas-menu{background:#3a3f51;top:190px;width:198px;}
     </style>
@@ -144,10 +143,10 @@ if($_COOKIE['goto_bibo']==1){
     <meta name="referrer" content="same-origin">
     <link rel="icon" type="image/x-icon" href="<?php echo kratos_option('site_ico'); ?>">
     <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/bootstrap.min.css';?>"/>
-    <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/pages/';?>bilibililive/style/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@1.1/css/pages/style.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
-    <script src="https://kit.fontawesome.com/67c50fd13a.js" crossorigin="anonymous"></script>
+    
     <title><?php wp_title('-',true,'right'); ?></title>
     <?php wp_head();wp_print_scripts('theme-jq'); ?>
     <style><?php
