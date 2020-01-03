@@ -59,10 +59,10 @@ if($_COOKIE['goto_bibo']==1){
 
     <!--仅同源网站发送请求-->
     <meta name="referrer" content="same-origin">
-<!--     <?php if (is_archive() && ($paged > 1) && ($paged < $wp_query->max_num_pages)) { ?>
+	<?php if (is_archive() && ($paged > 1) && ($paged < $wp_query->max_num_pages)) { ?>
     <link rel=”prefetch” href=”<?php echo get_next_posts_page_link(); ?>”>
     <link rel=”prerender” href=”<?php echo get_next_posts_page_link(); ?>”>
-    <?php } ?> -->
+    <?php } ?>
     <link rel="icon" type="image/x-icon" href="<?php echo kratos_option('site_ico'); ?>">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
     <title><?php wp_title('-',true,'right'); ?></title>
