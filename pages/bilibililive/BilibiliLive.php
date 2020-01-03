@@ -34,7 +34,7 @@ class BilibiliLive{
         curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);//这个很关键就是把获取到的数据以文件流的方式返回，而不是直接输出
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             //发送请求头
-            "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3966.0 Safari/537.36",
+            "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4015.0 Safari/537.36",
             "Referer: https://www.bilibili.com/",
         ));
         $info=json_decode(curl_exec($ch),true);
@@ -75,7 +75,7 @@ class BilibiliLive{
         curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);//这个很关键就是把获取到的数据以文件流的方式返回，而不是直接输出
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             //发送请求头
-            "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3966.0 Safari/537.36",
+            "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4015.0 Safari/537.36",
             "Referer: https://www.bilibili.com/",
         ));
         $info=json_decode(curl_exec($ch),true);

@@ -413,7 +413,9 @@ user agent stylesheet h2{display:block;font-size:1.5em;margin-block-start:.83em;
 .pull-left{float:left!important;}
 .row{margin:0 -15px}
 .useragent{font-size:15px}
-.visible-lg,.visible-md,.visible-sm,.visible-xs{display:none!important}
+.visible-lg,.visible-md,.visible-sm,.visible-xs{display:none!important;overflow:hidden;text-overflow:ellipsis}
+.nowrap a{margin:0;border:2px solid #ddd}
+.item .title a{border-top-left-radius:5px;border-top-right-radius:5px;border-bottom-left-radius:5px;border-bottom-right-radius:5px}
 .text-left{text-align:left}
 .text-right{text-align:right}
 .text-center{text-align:center}

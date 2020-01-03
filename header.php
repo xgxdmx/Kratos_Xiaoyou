@@ -67,9 +67,9 @@ if($_COOKIE['goto_bibo']==1){
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
     <title><?php wp_title('-',true,'right'); ?></title>
     <?php wp_head();wp_print_scripts('theme-jq'); ?>
-    <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/inc/live2d/waifu.css';?>"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@1.1/css/pages/style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@1.1/css/pages/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/live2d/waifu.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/css/pages/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/css/pages/main.css">
     <style>
         #offcanvas-menu{background:#3a3f51;top:190px;width:198px;}
     </style>
@@ -113,7 +113,7 @@ if($_COOKIE['goto_bibo']==1){
                     </div>
                 </div>
                 <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/prism.css';?>"/>
-                <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/inc/live2d/waifu.css';?>"/>
+                <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/live2d/waifu.css"/>
                 <?php if(kratos_option('animal_load')){?>
                     <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/animate.min.css';?>"/>
                 <?php }?>
@@ -143,8 +143,8 @@ if($_COOKIE['goto_bibo']==1){
     <meta name="referrer" content="same-origin">
     <link rel="icon" type="image/x-icon" href="<?php echo kratos_option('site_ico'); ?>">
     <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@1.1/css/pages/style.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/css/pages/style.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
     
     <title><?php wp_title('-',true,'right'); ?></title>
@@ -163,7 +163,7 @@ if($_COOKIE['goto_bibo']==1){
         ?>
     </style>
       <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/prism.css';?>"/>
-      <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/inc/live2d/waifu.css';?>"/>
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/live2d/waifu.css"/>
       <?php if(kratos_option('animal_load')){?>
           <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/animate.min.css';?>"/>
       <?php }?>

@@ -1103,10 +1103,11 @@ li.item {
 
 /*个人信息页下方的数据*/
 .status-webo {
-    margin-left: -4.8em;
-    margin-right: -2em;
+    margin-left: -4.78em;
+    margin-right: -1.95em;
     padding-top: 6px;
     margin-top: 30px;
+    margin-bottom: 34.5px;
 }
 
 
@@ -1141,7 +1142,7 @@ li.item {
 }*/
 .big-title{
     position: absolute;
-    bottom: 33%;
+    bottom: 25%;
     left: 37%;
     color: #fff;
     text-align: center;
