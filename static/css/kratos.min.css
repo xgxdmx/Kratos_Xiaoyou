@@ -1017,6 +1017,10 @@ cite.fn{padding-left:39px}
 .posts-collapse .collection-title::before{content:" ";position:absolute;left:0;top:50%;margin-left:-5px;margin-top:-5px;width:10px;height:10px;background:#bbb;border-radius:50%}
 .posts-collapse .post-header::before{content:" ";position:absolute;left:0;top:12px;width:8px;height:8px;margin-left:-4px;background:#bbb;border-radius:50%;border:1px solid #fff;transition-duration:.2s;transition-timing-function:ease-in-out;transition-property:background}
 .posts-collapse .post-header:hover::before{background:#222}
+button,a:hover,html input[type=button],input[type=reset],input[type=submit]{cursor:url('https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/img/pointer.cur'),auto;margin:0}
+.aplayer-icon:hover,.aplayer-button:hover{cursor:url('https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/img/pointer.cur'),auto}
+button[disabled],html input[disabled]{cursor:url('https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/img/move.cur'),auto}
+body,div,html,p{cursor:url('https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/img/cursor.cur'),default;margin:0}
 @media(max-width:1200px){.kratos-entry-content-new{height:300px;overflow:hidden;text-overflow:ellipsis}
     .widget{padding:15px}
     .widget_kratos_about .photo-background{height:100px}
@@ -1186,5 +1190,3 @@ cite.fn{padding-left:39px}
     #kratos-header,#respond,.cd-tool,.comments-area .avatar,.kratos-start{display:none}
     .comments-area .comment-awaiting-moderation,.comments-area .comment-meta,.comments-area .fn{margin-left:0}
 }
-
-
