@@ -99,9 +99,6 @@ function local_random_avatar( $avatar, $id_or_email, $size, $default, $alt) {
         $avatar = "<img alt='{$alt}' src='{$avatar}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}'/><div style='position: absolute;'><a href='//www.bilibili.com/blackboard/help.html#会员等级相关' target='_blank' lvl='0' class='n-level m-level'></a></div>";
 
     }
-//    }else{
-//        $avatar.="<div style='position: absolute;'><a href='//www.bilibili.com/blackboard/help.html#会员等级相关' target='_blank' lvl='6' class='n-level m-level'></a></div>";
-//    }
     return $avatar;
 }
 add_filter( 'get_avatar' , 'local_random_avatar' , 1 , 5 );
@@ -354,30 +351,17 @@ function most_hot_posts($days=30,$nums=5){
     }
     echo $output;
 }
-//
-////全站显示相对路径同时优化sitemap
-//add_filter( 'home_url', 'cx_remove_root' );
-//function cx_remove_root( $url) {
-//    if(!is_feed() && !get_query_var( 'sitemap') &&){
-//        $url = preg_replace( '|^(https?:)?//[^/]+(/?.*)|i', '$2', $url );
-//        return '/' . ltrim( $url, '/' );
-//    }else{
-//        return $url;
-//    }
-//}
-
-
 /*B站uid评论功能*/
 //存储数据
 add_action('wp_insert_comment','wp_insert_weibo',10,2);
 function wp_insert_weibo($comment_ID,$commmentdata) {
     $uid= isset($_POST['uid']) ? $_POST['uid'] : false;
-//    $nickname= isset($_REQUEST['nickname']) ? $_REQUEST['nickname'] : "无名";
+    $nickname= isset($_REQUEST['nickname']) ? $_REQUEST['nickname'] : "无名";
     $bilibiliphoto= isset($_REQUEST['photo']) ? $_REQUEST['photo'] : "";
     $avatarshang= isset($_REQUEST['hang']) ? $_REQUEST['hang'] : "";
     $level= isset($_REQUEST['level']) ? $_REQUEST['level'] : "0";
     update_comment_meta($comment_ID,'uid',$uid);
-//    update_comment_meta($comment_ID,'nickname',$nickname);
+    update_comment_meta($comment_ID,'nickname',$nickname);
     update_comment_meta($comment_ID,'photo',$bilibiliphoto);
     update_comment_meta($comment_ID,'hang',$avatarshang);
     update_comment_meta($comment_ID,'level',$level);
@@ -387,7 +371,7 @@ add_filter( 'manage_edit-comments_columns', 'my_comments_columns' );
 add_action( 'manage_comments_custom_column', 'output_my_comments_columns', 10, 2 );
 function my_comments_columns( $columns ){
     $columns[ 'uid' ] = __( 'uid' );        //uid是代表列的名字
-//    $columns[ 'nickname' ] = __( '昵称' );
+    $columns[ 'nickname' ] = __( '昵称' );
     $columns[ 'photo' ] = __( '照片地址' );
     $columns[ 'hang' ] = __( '头像挂件' );
     $columns[ 'level' ] = __( '等级' );
@@ -398,9 +382,9 @@ function output_my_comments_columns( $column_name, $comment_id ){
         case "uid" :
             echo get_comment_meta( $comment_id, 'uid', true );
             break;
-//        case "nickname" :
-//            echo get_comment_meta( $comment_id, 'nickname', true );
-//            break;
+        case "nickname" :
+            echo get_comment_meta( $comment_id, 'nickname', true );
+            break;
         case "photo" :
             echo get_comment_meta( $comment_id, 'photo', true );
             break;
@@ -431,11 +415,20 @@ function colorCloudCallback($matches) {
     $text = preg_replace($pattern, "style=\"background:#{$color};\"", $text);
     return "<a $text>";
 }
+//支持WEBP格式图片文件
+function bzg_filter_mime_types( $array ) {
+  $array['webp'] = 'image/webp';
+  return $array; 
+}
+add_filter( 'mime_types', 'bzg_filter_mime_types', 10, 1 );
+function bzg_file_is_displayable_image($result, $path) {
+  $info = @getimagesize( $path );
+  if($info['mime'] == 'image/webp') {
+    $result = true;
+  }
+  return $result;
+}
+add_filter( 'file_is_displayable_image', 'bzg_file_is_displayable_image', 10, 2 );
 //把php代码挂载到wp_tag_cloud钩子上
 add_filter('wp_tag_cloud', 'colorCloud', 1);
-
-
-
-
-
 ?>
