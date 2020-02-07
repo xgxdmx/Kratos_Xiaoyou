@@ -3,7 +3,6 @@
 <?php
 /*B博处理函数*/
 /*先判断是否需要跳转B博*/
-//if($_REQUEST["style"]=='krato'){if(isset($_COOKIE['goto_bibo'])){setcookie('goto_bibo',0);}}
 if(kratos_option('bibo_pagelink')) {
     if ($_REQUEST["style"] == 'krato') {
         setcookie('goto_bibo', 0);
@@ -142,6 +141,12 @@ if($_COOKIE['goto_bibo']==1){
     <!-- 允许访问站外资源 -->
     <meta name="referrer" content="same-origin">
     <link rel="icon" type="image/x-icon" href="<?php echo kratos_option('site_ico'); ?>">
+    <!-- 悼念页面CSS -->
+    <?php if (kratos_option('site_bw')==1): ?>
+        <style type="text/css">
+            html{filter: grayscale(100%);-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);filter: gray;-webkit-filter: grayscale(1);}
+        </style>
+    <?php endif; ?>
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/css/pages/style.min.css">

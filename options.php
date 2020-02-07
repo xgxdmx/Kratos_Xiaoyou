@@ -143,6 +143,12 @@ function optionsframework_options(){
         'std'=>'0',
         'type'=>'checkbox');
     $options[] = array(
+        'name' => '站点黑白',
+        'desc' => '是否启用站点黑白功能(一般常用于悼念日)',
+        'id' => 'site_bw',
+        'std' => '0',
+        'type' => 'checkbox');
+    $options[] = array(
         'name'=>'组件配置',
         'type'=>'heading');
     $options[] = array(

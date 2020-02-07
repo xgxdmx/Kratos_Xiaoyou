@@ -46,7 +46,7 @@ class bilibiliAnime
         curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);//这个很关键就是把获取到的数据以文件流的方式返回，而不是直接输出
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             //发送请求头
-            "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4006.0 Safari/537.36",
+            "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/82.0.4051.0 Safari/537.36",
             "Referer: https://www.bilibili.com/",
         ));
 
@@ -65,7 +65,7 @@ class bilibiliAnime
             curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);//这个很关键就是把获取到的数据以文件流的方式返回，而不是直接输出
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                 //发送请求头
-                "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4006.0 Safari/537.36",
+                "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/82.0.4051.0 Safari/537.36",
                 "Referer: https://www.bilibili.com/",
                 "Cookie: $cookie",
             ));
