@@ -1,5 +1,3 @@
-<!DOCTYPE HTML>
-<html <?php language_attributes(); ?>>
 <?php
 /*B博处理函数*/
 /*先判断是否需要跳转B博*/
@@ -120,6 +118,8 @@ if($_COOKIE['goto_bibo']==1){
         </div>
 
 <?php }else{ ?>
+<!DOCTYPE HTML>
+<html <?php language_attributes(); ?>>
   <head>
     <meta charset="<?php bloginfo('charset'); ?>">
 <!--      pjax强制重载-->

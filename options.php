@@ -155,13 +155,13 @@ function optionsframework_options(){
         'name'=>'自定义Font Awesome',
         'desc'=>'自定义Font Awesome 4.7字体库链接，留空将从本地加载',
         'id'=>'fa_url',
-        'std'=>'https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css',
+        'std'=>'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css',
         'type'=>'text');
     $options[] = array(
         'name'=>'自定义jQuery',
         'desc'=>'自定义jQuery链接，留空将从本地加载',
         'id'=>'jq_url',
-        'std'=>'https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js',
+        'std'=>'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
         'type'=>'text');
     $options[] = array(
         'name'=>'附加JS',
