@@ -150,7 +150,7 @@ if($_COOKIE['goto_bibo']==1){
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/css/pages/style.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
     
     <title><?php wp_title('-',true,'right'); ?></title>
     <?php wp_head();wp_print_scripts('theme-jq'); ?>

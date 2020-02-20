@@ -75,7 +75,7 @@ class bilibiliAnime
                 array_push($this->title, $data['title']);
                 array_push($this->image_url, $data['cover']);
                 array_push($this->total, $data['new_ep']['title']);
-                array_push($this->progress,$this->process($data['progress']));
+                array_push($this->progress, $this->process($data['progress']));
                 array_push($this->evaluate, $data['evaluate']);
                 array_push($this->season_id, $data['season_id']);
             }
