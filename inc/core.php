@@ -338,6 +338,14 @@ function kratos_comment_err($a){
     echo $a;
     exit;
 }
+//人工验证码
+function spam_protection($commentdata){
+    if(!is_user_logged_in()){
+        if($_POST['co_num1']+$_POST['co_num2']-3!=$_POST['code']) kratos_comment_err(__('验证码错误'));
+    }
+    return $commentdata;
+}
+add_filter('pre_comment_on_post','spam_protection');
 function kratos_comment_callback(){
     $comment = wp_handle_comment_submission(wp_unslash($_POST));
     if(is_wp_error($comment)){

@@ -10,12 +10,15 @@
             </div>
         <?php }
     }else echo '</ol>';
+    $comment_num1=rand(0,9);
+    $comment_num2=rand(0,9);
      //echo("<script>console.log('".json_encode($commenter)."');</script>");
     $fields=array(
         'uid'=>'<div class="wow bounceInLeft"><div class="comment-form-bilibili form-group has-feedback"><div class="input-group"><div class="input-group-addon"><i class="fa fa-id-card-o" aria-hidden="true"></i></div><input class="form-control" placeholder="B站uid" id="uid" name="uid" type="text" value="'.esc_attr($_COOKIE["Buid"]).'" size="30" /><span class="form-control-feedback required">*</span></div></div></div>',
         'author'=>'<div class="wow bounceInRight"><div class="comment-form-author form-group has-feedback"><div class="input-group"><div class="input-group-addon"><i class="fa fa-user"></i></div><input class="form-control" placeholder="昵称" id="author" name="author" type="text" value="'.esc_attr($commenter['comment_author']).'" size="30" /><span class="form-control-feedback required">*</span></div></div></div>',
         'email'=>'<div class="wow bounceInLeft"><div class="comment-form-email form-group has-feedback wow jackInTheBox"><div class="input-group"><div class="input-group-addon"><i class="fa fa-envelope-o"></i></div><input class="form-control" placeholder="邮箱" id="email" name="email" type="text" value="'.esc_attr($commenter['comment_author_email']).'" size="30" /><span class="form-control-feedback required">*</span></div></div></div>',
         'url'=>'<div class="wow bounceInRight"><div class="comment-form-url form-group has-feedback wow jackInTheBox"><div class="input-group"><div class="input-group-addon"><i class="fa fa-link"></i></div><input class="form-control" placeholder="网站" id="url" name="url" type="text" value="'.esc_attr($commenter['comment_author_url']).'" size="30" /></div></div></div>',
+        'code'=>'<div class="comment-form-url form-group has-feedback"><div class="input-group"><div class="input-group-addon"><i class="fa fa-key"></i></div><input class="form-control" placeholder="'.__('人机验证：').$comment_num1.' ＋ '.$comment_num2.' = ?" id="code" name="code" type="text" value="" autocomplete="off" size="30" /><span class="form-control-feedback required">*</span><input type="hidden" name="co_num1" value="'.($comment_num1 + 1).'" /><input type="hidden" name="co_num2" value="'.($comment_num2 + 2).'" /></div></div>',
         'cookies'=>'',
     );
     $args=array(
