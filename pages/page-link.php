@@ -4,7 +4,7 @@ template name: 友情链接模板
 */
 
 get_header(); ?>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.min.js"></script>
 <?php
 //这边接收post数据然后判断
 if(!empty($_REQUEST)) {
@@ -102,7 +102,7 @@ if($_COOKIE['goto_bibo']==1){
                                 </ul>
                                 <hr/>
                                 <!-- 按钮触发模态框 -->
-                                <button class="btn btn-success" data-toggle="modal" data-target="#myModal" style="border-radius: 4px;margin-bottom: 15px">点击申请</button>
+                                <button class="btn btn-success" data-toggle="modal" data-target="#myModal" style="border-radius: 4px;margin-bottom: 15px;float: right;">点击申请</button>
                                 <!-- 模态框（Modal） -->
                                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">

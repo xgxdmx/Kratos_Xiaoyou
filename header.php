@@ -76,7 +76,7 @@ if($_COOKIE['goto_bibo']==1){
 <div id="kratos-wrapper">
     <div id="kratos-page">
         <div id="sider-bar">
-            <div class="clearfix  text-center hide  show" id="aside-user">
+            <div class="clearfix  text-center hide  show_image" id="aside-user">
                 <div class="dropdown wrapper">
                     <div ui-nav="">
                         <a href="<?php echo kratos_option('person_link'); ?>">
@@ -179,7 +179,7 @@ if($_COOKIE['goto_bibo']==1){
     <div id="kratos-wrapper">
             <div id="kratos-page">
                 <div id="sider-bar">
-                    <div class="clearfix  text-center hide  show" id="aside-user">
+                    <div class="clearfix  text-center hide  show_image" id="aside-user">
                         <div class="dropdown wrapper">
                             <div ui-nav="">
                                 <a href="<?php echo kratos_option('person_link'); ?>">

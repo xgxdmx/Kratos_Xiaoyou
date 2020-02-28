@@ -771,7 +771,7 @@ a.comment-reply-link,a.comment-reply-login{text-decoration:none;padding:2px 5px;
 
 /*头像部分代码*/
 
-.show{display:block!important;background:#3a3f51;height:190px;width:240px;z-index:1000;position: fixed;}
+.show_image{display:block!important;background:#3a3f51;height:190px;width:240px;z-index:1000;position: fixed;}
 .text-center{text-align:center}
 .wrapper{padding:15px}
 .dropdown,.dropup{position:relative}
@@ -974,7 +974,7 @@ cite.fn{padding-left:39px}
 .widget_links img{width:25px;height:25px;margin-top:-3px;border-radius:50%}
 .cd-tool>div{position:fixed;right:20px;z-index:999}
 .cd-tool span{display:table-cell;vertical-align:middle;color:#fff;width:40px;height:40px;font-size:18px}
-.edit-box{bottom:80px;right:52px;margin-right:52px;background:#848484;opacity:7;width:40px;height:40px}
+.edit-box{bottom:80px;right:52px;margin-right:52px;background:#848484;opacity:.7;width:40px;height:40px}
 .edit-box.edit-box2{bottom:180px}
 .gotop-box{bottom:80px;visibility:hidden;opacity:0;-webkit-transition:.5s;transition:.5s}
 .gotop-box.gotop-box2{bottom:130px}
