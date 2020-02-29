@@ -48,7 +48,7 @@
                 <?php if(kratos_option('bibo_pagelink')){?>
                     <div class="bilbili-box">
                         <?php if($_COOKIE['goto_bibo']==1){?>
-                            <a href="<?php echo site_url();?>?style=kratos"> <span class="fas fa-exchange-alt"  title="切换风格"></span></a>
+                            <a href="<?php echo site_url();?>?style=krato"> <span class="fas fa-exchange-alt"  title="切换风格"></span></a>
                         <?php }else{?>
                             <a href="<?php echo site_url();?>?style=bibo"> <span class="fas fa-exchange-alt"  title="切换风格"></span></a>
                         <?php }?>
