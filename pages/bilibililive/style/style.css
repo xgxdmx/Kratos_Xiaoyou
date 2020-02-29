@@ -2256,7 +2256,7 @@ li.item {
 }
 
 /*手机样式*/
-@media(max-width:530px) {
+@media(max-width:768px) {
 
     /*手机*/
     /*顶部*/
@@ -2269,8 +2269,8 @@ li.item {
     }
 
     header#header {
-        max-width: 98%;
-        margin-left: 12px;
+        max-width: 100%;
+        margin-left: 0px;
     }
 
     section.banner.bg {
@@ -2282,11 +2282,11 @@ li.item {
     }
 
     .banner-item.width a {
-        max-width: 88%
+        max-width: 95%
     }
 
     .banner-item.width a {
-        padding: 15px 70px;
+        padding: 10px 45px;
     }
 
     #aside {
