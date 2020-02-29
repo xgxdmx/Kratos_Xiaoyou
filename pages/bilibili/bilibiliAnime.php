@@ -38,6 +38,12 @@ class bilibiliAnime
             }
         }
     }
+    //将追番番剧图片http转换https
+    private function https_url($data)
+    {
+        $data=str_replace("http://", "https://", $data);
+        return $data;
+    }
     private function getpage($uid)
     {
         $url="https://api.bilibili.com/x/space/bangumi/follow/list?type=1&follow_status=0&pn=1&ps=15&vmid=$uid";
@@ -72,8 +78,8 @@ class bilibiliAnime
             $info=json_decode(curl_exec($ch),true);
             curl_close($ch);//关闭连接
             foreach ($info['data']['list'] as $data) {
-                array_push($this->title, $data['title']);
-                array_push($this->image_url, $data['cover']);
+                array_push($this->title, $data['title']);  
+                array_push($this->image_url, $this->https_url($data['cover']));
                 array_push($this->total, $data['new_ep']['title']);
                 array_push($this->progress, $this->process($data['progress']));
                 array_push($this->evaluate, $data['evaluate']);
