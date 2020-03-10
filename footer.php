@@ -5,12 +5,12 @@
             <div class="row">
                 <div class="col-md-12 footer-list text-center">
                     <p class="kratos-social-icons"><?php
-                        echo (!kratos_option('social_weibo'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_weibo').'"><i class="fab fa-weibo"></i></a>';
-                        echo (!kratos_option('social_tweibo'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_tweibo').'"><i class="fab fa-tencent-weibo"></i></a>';
-                        echo (!kratos_option('social_mail'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_mail').'"><i class="fas fa-envelope"></i></a>';
-                        echo (!kratos_option('social_twitter'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_twitter').'"><i class="fab fa-twitter"></i></a>';
-                        echo (!kratos_option('social_facebook'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_facebook').'"><i class="fab fa-facebook-official"></i></a>';
-                        echo (!kratos_option('social_linkedin'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_linkedin').'"><i class="fa fa-linkedin-square"></i></a>';
+                        echo (!kratos_option('social_weibo'))?'':'<a class="weibo-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_weibo').'"><i class="fab fa-weibo"></i></a>';
+                        echo (!kratos_option('social_tweibo'))?'':'<a class="tweibo-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_tweibo').'"><i class="fab fa-tencent-weibo"></i></a>';
+                        echo (!kratos_option('social_mail'))?'':'<a class="mail-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_mail').'"><i class="fas fa-envelope"></i></a>';
+                        echo (!kratos_option('social_twitter'))?'':'<a class="twitter-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_twitter').'"><i class="fab fa-twitter"></i></a>';
+                        echo (!kratos_option('social_facebook'))?'':'<a class="facebook-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_facebook').'"><i class="fab fa-facebook-official"></i></a>';
+                        echo (!kratos_option('social_linkedin'))?'':'<a class="linkedin-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_linkedin').'"><i class="fa fa-linkedin-square"></i></a>';
                         echo (!kratos_option('social_github'))?'':'<a class="github-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_github').'"><i class="fab fa-github"></i></a>';
                         echo (!kratos_option('show_rss'))?'':'<a class="rss-tip" title="RSS订阅" target="_blank" rel="nofollow" href="';
                         if(kratos_option('show_rss')){ bloginfo('url');
@@ -18,7 +18,7 @@
                         //B站logo
                         if(kratos_option('social_bilibili'))
                         {
-                            echo '<a target="_blank" rel="nofollow" href="https://space.bilibili.com/'.kratos_option('social_bilibili').'"><img style="height: 30px;top:-9px;position:relative;left:-4px;" title="bilibili" src="';
+                            echo '<a class="bilibili-tip" target="_blank" rel="nofollow" href="https://space.bilibili.com/'.kratos_option('social_bilibili').'"><img style="height: 30px;top:-9px;position:relative;left:-4px;" title="bilibili" src="';
                             bloginfo('template_url');
                             echo '/static/images/ua/bilibili.png"></a>';
                         }?>

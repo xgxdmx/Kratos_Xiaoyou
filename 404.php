@@ -19,6 +19,11 @@
                 <h1>404</h1>
                 <h2>Not Found</h2>
                 <p>欸？我的萝莉怎么不见了？！</p>
+                <p>您的IP地址：<?php
+$user_IP = ($_SERVER["HTTP_VIA"]) ? $_SERVER["HTTP_X_FORWARDED_FOR"] : $_SERVER["REMOTE_ADDR"];
+$user_IP = ($user_IP) ? $user_IP : $_SERVER["REMOTE_ADDR"]; 
+echo $user_IP;
+?></p>
             </div>
         </div>
         <div class="footer">

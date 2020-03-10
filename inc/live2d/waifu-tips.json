@@ -25,15 +25,15 @@
             "none": ["欢迎阅读<span style=\"color:#0099cc;\">『", "』</span>", " - "]
         },
         "referrer_hostname": {
-            "example.com": ["示例网站"],
-            "www.xiaoyou66.com": ["小游网"]
+            "www.xgxdmx.com": ["梦の彼方"],
+            "www.xgxdmx.cn": ["梦之境"]
         },
         "model_message": {
             "1": ["来自 Potion Maker 的 Pio 酱 ~"],
             "2": ["来自 Potion Maker 的 Tia 酱 ~"]  
         },
         "hitokoto_api_message": {
-            "lwl12.com": ["这句一言来自 <span style=\"color:#0099cc;\">『{source}』</span>", "，是 <span style=\"color:#0099cc;\">{creator}</span> 投稿的", "。"],
+            "hitokoto.cn": ["这句一言来自 <span style=\"color:#0099cc;\">『{source}』</span>", "，是 <span style=\"color:#0099cc;\">{creator}</span> 投稿的", "。"],
             "fghrsh.net": ["这句一言出处是 <span style=\"color:#0099cc;\">『{source}』</span>，是 <span style=\"color:#0099cc;\">FGHRSH</span> 在 {date} 收藏的！"],
             "jinrishici.com": ["这句诗词出自 <span style=\"color:#0099cc;\">《{title}》</span>，是 {dynasty}诗人 {author} 创作的！"],
             "hitokoto.cn": ["这句一言来自 <span style=\"color:#0099cc;\">『{source}』</span>，是 <span style=\"color:#0099cc;\">{creator}</span> 在 hitokoto.cn 投稿的。"]
@@ -74,7 +74,11 @@
         { "selector": ".fastforward", "text": ["想听下一首歌吗？"]},
         { "selector": "#span_dt_dt", "text": ["小站已经在风雨中经历了{text},以后还请多多关照咯！"]},
         { "selector": ".kratos-post-meta", "text": ["这里是文章的一些信息哦！"]},
+        { "selector": ".weibo-tip", "text": ["来看看主人的微博吧！虽然基本上是在吃灰。"]},
+        { "selector": ".mail-tip", "text": ["可以通过Email联系主人哦！"]},
+        { "selector": ".twitter-tip", "text": ["来看看主人的Twitter吧！"]},
         { "selector": ".github-tip", "text": ["来看看主人有哪些开源项目吧！"]},
+        { "selector": ".bilibili-tip", "text": ["来看看主人的B站吧！"]},
         { "selector": ".rss-tip", "text": ["来订阅主人的RSS吧"]}
 
     ],
@@ -86,21 +90,21 @@
                 "萝莉控是什么呀",
                 "你看到我的小熊了吗",
                 "再摸的话我可要报警了！⌇●﹏●⌇",
-                "110吗，这里有个变态一直在摸我(ó﹏ò｡)"
+                "110吗，这里有个变态死宅一直在摸我(ó﹏ò｡)"
             ]
         }
     ],
     "seasons": [
         { "date": "01/01", "text": ["<span style=\"color:#0099cc;\">元旦</span>了呢，新的一年又开始了，今年是{year}年~"] },
         { "date": "02/14", "text": ["又是一年<span style=\"color:#0099cc;\">情人节</span>，{year}年找到对象了嘛~"] },
-        { "date": "03/08", "text": ["今天是<span style=\"color:#0099cc;\">妇女节</span>！"] },
+        { "date": "03/08", "text": ["今天是<span style=\"color:#0099cc;\">妇女节</span>！要小心哦！ヽ(*。>Д<)o゜"] },
         { "date": "03/12", "text": ["今天是<span style=\"color:#0099cc;\">植树节</span>，要保护环境呀"] },
         { "date": "04/01", "text": ["悄悄告诉你一个秘密~<span style=\"background-color:#34495e;\">今天是愚人节，不要被骗了哦~</span>"] },
         { "date": "05/01", "text": ["今天是<span style=\"color:#0099cc;\">五一劳动节</span>，计划好假期去哪里了吗~"] },
-        { "date": "06/01", "text": ["<span style=\"color:#0099cc;\">儿童节</span>了呢，快活的时光总是短暂，要是永远长不大该多好啊…"] },
+        { "date": "06/01", "text": ["<span style=\"color:#0099cc;\">儿童节</span>了呢，快活的时光总是短暂，要是永远长不大该多好啊…（如果没有中国式教育的前提下）"] },
         { "date": "09/03", "text": ["<span style=\"color:#0099cc;\">中国人民抗日战争胜利纪念日</span>，铭记历史、缅怀先烈、珍爱和平、开创未来。"] },
-        { "date": "09/10", "text": ["<span style=\"color:#0099cc;\">教师节</span>，在学校要给老师问声好呀~"] },
-        { "date": "10/01", "text": ["<span style=\"color:#0099cc;\">国庆节</span>，新中国已经成立70年了呢"] },
+        { "date": "09/10", "text": ["<span style=\"color:#0099cc;\">教师节</span>，在学校要给自己喜欢的老师问声好呀~"] },
+        { "date": "10/01", "text": ["<span style=\"color:#0099cc;\">国庆节</span>，新中国已经成立{year-1949}年了呢"] },
         { "date": "11/05-11/12", "text": ["今年的<span style=\"color:#0099cc;\">双十一</span>是和谁一起过的呢~"] },
         { "date": "12/20-12/31", "text": ["这几天是<span style=\"color:#0099cc;\">圣诞节</span>，主人肯定又去剁手买买买了~"] }
     ]

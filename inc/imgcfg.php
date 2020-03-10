@@ -57,7 +57,7 @@ function kratos_blog_thumbnail(){
 }
 add_filter('add_image_size',function(){return 1;});
 add_theme_support("post-thumbnails");
-//这个是文章北极图片代码
+//这个是文章背景图片代码
 function kratos_blog_thumbnail_new(){
     global $post;
     $img_id = get_post_thumbnail_id();

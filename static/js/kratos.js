@@ -1,5 +1,5 @@
 //functions
-(function(){
+$(function(){
     'use strict';
     var shareMenu = function(){
         $(document).on('click','.Share',function(){
@@ -7,15 +7,15 @@
         });
     }
     var sidebaraffix = function(){
-        if($('#sidebar').height()&&xb.site_sh){
-            if($('#main').height()>$('#sidebar').height()){
+        if($('#side-bar').height()&&xb.site_sh){
+            if($('#main').height()>$('#side-bar').height()){
                 var footerHeight = 0;
                 if($('#page-footer').length>0){
                     footerHeight = $('#page-footer').outerHeight(true);
                 }
-                $('#sidebar').affix({
+                $('#side-bar').affix({
                     offset:{
-                        top:$('#sidebar').offset().top-xb.site_sh,
+                        top:$('#side-bar').offset().top-xb.site_sh,
                         bottom:$('#footer').outerHeight(true)+footerHeight+6
                     }
                 });
@@ -482,10 +482,10 @@ function SetCookie(sName, sValue,iExpireDays) {
     if (iExpireDays){
         var dExpire = new Date();
         dExpire.setTime(dExpire.getTime()+parseInt(iExpireDays*24*60*60*1000));
-        document.cookie = sName + "=" + escape(sValue) + "; expires=" + dExpire.toGMTString()+ "; path=/;domain=xiaoyou66.com";
+        document.cookie = sName + "=" + escape(sValue) + "; expires=" + dExpire.toGMTString()+ "; path=/;domain=xgxdmx.com";
     }
     else{
-        document.cookie = sName + "=" + escape(sValue)+ "; path=/;domain=xiaoyou66.com";
+        document.cookie = sName + "=" + escape(sValue)+ "; path=/;domain=xgxdmx.com";
     }
 }
 
@@ -501,43 +501,3 @@ function GetCookie(sName) {
     return null;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

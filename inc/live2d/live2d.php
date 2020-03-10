@@ -41,9 +41,9 @@ function savejs($content)
 //下载图片
 function downloadimg($url,$imgpath)
 {
-    curlGet($url, $imgpath.'1.zip');//下载
-    unzip($imgpath.'1.zip',$imgpath);//解压
-    unlink($imgpath.'1.zip');//删除
+    curlGet($url, $imgpath.'img.zip');//下载
+    unzip($imgpath.'img.zip',$imgpath);//解压
+    unlink($imgpath.'img.zip');//删除
 }
 
 //看板娘的设置界面
@@ -119,7 +119,7 @@ function live2d_option_page() {
             if($_POST['donman']) {
                 //批量删除图片
                 // downloadimg('http://cdn.xiaoyou66.com/image/thumb.zip',$imgpath)
-                downloadimg('https://www.xgxdmx.com/images/thumb.zip',$imgpath)
+                downloadimg('https://cdn.jsdelivr.net/gh/xgxdmx/blog_images@latest/thumb.zip',$imgpath)
                 ?>
                 <div id="message" class="updated">
                     <p><strong>已下载动漫图片资源,不保证绝对下载成功，请自行到主页刷新来进行查看</strong></p>
@@ -153,7 +153,7 @@ function live2d_option_page() {
             if($_POST['man']) {
                 //批量删除图片
                 // downloadimg('http://cdn.xiaoyou66.com/image/avatarman.zip',$imgpath)
-                downloadimg('https://www.xgxdmx.com/images/avatarman.zip',$imgpath)
+                downloadimg('https://cdn.jsdelivr.net/gh/xgxdmx/blog_images@latest/avatarman.zip',$imgpath)
                 ?>
                 <div id="message" class="updated">
                     <p><strong>已下载动漫男生头像,不保证绝对下载成功，请自行到主页刷新来进行查看</strong></p>
@@ -162,7 +162,7 @@ function live2d_option_page() {
             }
             if($_POST['woman']) {
                 // downloadimg('http://cdn.xiaoyou66.com/image/avatarwoman.zip',$imgpath);
-                downloadimg('https://www.xgxdmx.com/images/avatarwoman.zip',$imgpath);
+                downloadimg('https://cdn.jsdelivr.net/gh/xgxdmx/blog_images@latest/avatarwoman.zip',$imgpath);
                 ?>
                 <div id="message" class="updated">
                     <p><strong>已下载动漫女生头像,不保证绝对下载成功，请自行到主页刷新来进行查看</strong></p>
@@ -172,7 +172,7 @@ function live2d_option_page() {
         }
         if($_POST['downlive2d']) {
             // downloadimg('http://cdn.xiaoyou66.com/image/live2d.zip',$_SERVER['DOCUMENT_ROOT'].'/');
-            downloadimg('https://www.xgxdmx.com/images/live2d.zip',$_SERVER['DOCUMENT_ROOT'].'/');
+            downloadimg('https://cdn.jsdelivr.net/gh/xgxdmx/blog_images@latest/live2d%20.zip',$_SERVER['DOCUMENT_ROOT'].'/');
             ?>
             <div id="message" class="updated">
                 <p><strong>已下载live2d资源，不保证绝对成功，请自行检查</strong></p>
@@ -185,7 +185,7 @@ function live2d_option_page() {
             $smilepath=dirname(dirname(dirname(__FILE__))).'/static/images/smilies/';
             $owo=dirname(dirname(__FILE__))."/OwO.json";
             // if(!file_exists($smilepath."tieba/")) downloadimg('http://cdn.xiaoyou66.com/image/smile.zip', $smilepath);
-            if(!file_exists($smilepath."tieba/")) downloadimg('https://www.xgxdmx.com/images/smile.zip', $smilepath);
+            if(!file_exists($smilepath."tieba/")) downloadimg('https://cdn.jsdelivr.net/gh/xgxdmx/blog_images@latest/smile.zip', $smilepath);
             $url="";
             if($_POST['tieba']) $url.="1";
             if($_POST['face'])  $url?$url.=",2":$url.="2";

@@ -1,0 +1,6 @@
+动漫api：https://api.ixiaowai.cn/api/api.php
+https://s0.xinger.ink/acgimg/acgurl.php
+Bing随机api：https://api.cn.berryapi.net/?service=App.Bing.Images&rand=1
+Bing当天api：https://api.cn.berryapi.net/?service=App.Bing.Images
+https://api.berryapi.net/?service=App.Bing.Images&day=0
+各种其他api：https://www.berryapi.net/
