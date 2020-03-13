@@ -74,7 +74,7 @@ function custom_smilies_src($img_src,$img,$siteurl){
 }
 function smilies_reset(){
     global $wpsmiliestrans,$wp_smiliessearch,$wp_version;
-    if(!get_option('use_smilies')||$wp_version<4.2) return;
+    if(!get_option('use_smilies')||$wp_version<5.4) return;
     $wpsmiliestrans = array(
      ':hehe:' => 'tieba/hehe.png',
      ':haha:' => 'tieba/haha.png',

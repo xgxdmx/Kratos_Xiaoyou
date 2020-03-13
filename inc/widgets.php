@@ -405,10 +405,6 @@ class kratos_widget_comments extends WP_Widget {
         $output .= '<div class="recentcomments">';
         if(is_array($comments)&&$comments){
             foreach($comments as $comment){
-//                echo '<script>console.log('.$comment.')</script>';
-//                echo '<pre>';
-//                echo var_dump($comment);
-//                echo '<pre>';
                 $comment_ID=$comment->comment_ID;
                 $photo=get_comment_meta($comment_ID,'photo',true);
                 $output .= '<li class="comment-listitem">';
