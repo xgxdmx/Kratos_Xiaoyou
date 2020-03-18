@@ -836,7 +836,7 @@ thead td {background-color: #cce8eb;width: 100px;}
 
 /*新日记页面*/
 #primary-new{margin-top:16px;margin-bottom:27px;padding-left:13px;padding-right:15px}
-.item-diary{border-top:1px solid #e1e8ed;display:inline-block;cursor:pointer;line-height:36px;width:50%;float:left;height:43px;background:#fff;text-align:center;padding-top:4px;border-right:1px solid #e1e8ed}
+.item-diary{border-top:1px solid #e1e8ed;display:inline-block;cursor:pointer;line-height:55px;width:50%;float:left;height:61px;background:#fff;text-align:center;padding-top:4px;border-right:1px solid #e1e8ed}
 .pull-left img{width:50px;height:50px;bottom:7px}
 
 

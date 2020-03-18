@@ -56,7 +56,7 @@ function optionsframework_options(){
         'desc'=>'整个站点背景图片控制(背景类型选择为图片才有效)',
         'id'=>'background_index_image',
         'std'=>'http://cdn.xiaoyou66.com/theme/background.jpg',
-        'type'=>'upload');
+        'type'=>'text');
     $options[] = array(
         'name'=>'开启手机背景图片',
         'id'=>'openphoneimg',
