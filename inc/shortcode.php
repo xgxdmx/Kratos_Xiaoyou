@@ -13,7 +13,13 @@ function info($atts,$content=null,$code=""){
     return $return;
 }
 add_shortcode('info','info');
-
+function warning($atts,$content=null,$code=""){
+    $return = '<div class="alert alert-warning">';
+    $return .= do_shortcode($content);
+    $return .= '</div>';
+    return $return;
+}
+add_shortcode('warning','warning');
 function danger($atts,$content=null,$code=""){
     $return = '<div class="alert alert-danger">';
     $return .= do_shortcode($content);
@@ -29,7 +35,13 @@ function wymusic($atts,$content=null,$code=""){
     return $return;
 }
 add_shortcode('music','wymusic');
-
+function bdbtn($atts,$content=null,$code=""){
+    $return = '<a class="downbtn" href="';
+    $return .= $content;
+    $return .= '" target="_blank"><i class="fa fa-download"></i> '.__('本地下载','moedog').'</a>';
+    return $return;
+}
+add_shortcode('bdbtn','bdbtn');
 function ypbtn($atts,$content=null,$code=""){
     $return = '<a class="downbtn downcloud" href="';
     $return .= $content;
@@ -44,8 +56,20 @@ function nrtitle($atts,$content=null,$code=""){
     return $return;
 }
 add_shortcode('title','nrtitle');
-
-
+function kbd($atts,$content=null,$code=""){
+    $return = '<kbd>';
+    $return .= $content;
+    $return .= '</kbd>';
+    return $return;
+}
+add_shortcode('kbd','kbd');
+function nrmark($atts,$content=null,$code=""){
+    $return = '<mark>';
+    $return .= $content;
+    $return .= '</mark>';
+    return $return;
+}
+add_shortcode('mark','nrmark');
 function striped($atts,$content=null,$code=""){
     $return = '<div class="progress progress-striped active"><div class="progress-bar" style="width: ';
     $return .= $content;
@@ -109,6 +133,16 @@ function infobox($atts,$content=null,$code=""){
     return $return;
 }
 add_shortcode('infobox','infobox');
+function warningbox($atts,$content=null,$code=""){
+    extract(shortcode_atts(array("title"=>__('标题内容','moedog')),$atts));
+    $return = '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">';
+    $return .= $title;
+    $return .= '</h3></div><div class="panel-body">';
+    $return .= do_shortcode($content);
+    $return .= '</div></div>';
+    return $return;
+}
+add_shortcode('warningbox','warningbox');
 
 function highlight($atts,$content=null,$code=""){
     extract(shortcode_atts(array("lanaguage"=>'语言'),$atts));
@@ -171,13 +205,45 @@ function wxmusic($atts,$content=null,$code=""){
 add_shortcode('wxmusic','wxmusic');
 
 
-
+function youku($atts,$content=null,$code=""){
+    $return = '<div class="video-container"><iframe height="498" width="100%" src="https://player.youku.com/embed/';
+    $return .= $content;
+    $return .= '" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+    return $return;
+}
+add_shortcode('youku','youku');
+function tudou($atts,$content=null,$code=""){
+    extract(shortcode_atts(array("code"=>'0'),$atts));
+    $return = '<div class="video-container"><iframe src="https://www.tudou.com/programs/view/html5embed.action?type=1&code=';
+    $return .= $content;
+    $return .= '&lcode=';
+    $return .= $code;
+    $return .= '&resourceId=0_06_05_99" allowtransparency="true" allowfullscreen="true" allowfullscreenInteractive="true" scrolling="no" border="0" frameborder="0"></iframe></div>';
+    return $return;
+}
+add_shortcode('tudou','tudou');
+function vqq($atts,$content=null,$code=""){
+    extract(shortcode_atts(array("auto"=>'0'),$atts));
+    $return = '<div class="video-container"><iframe frameborder="0" width="100%" height="498" src="https://v.qq.com/iframe/player.html?vid=';
+    $return .= $content;
+    $return .= '&tiny=0&auto=';
+    $return .= $auto;
+    $return .= '" allowfullscreen></iframe></div>';
+    return $return;
+}
+add_shortcode('vqq','vqq');
+function youtube($atts,$content=null,$code=""){
+    $return = '<div class="video-container"><iframe height="498" width="100%" src="https://www.youtube.com/embed/';
+    $return .= $content;
+    $return .= '" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+    return $return;
+}
+add_shortcode('youtube','youtube');
 function bilibili($atts,$content=null,$code=""){
     extract(shortcode_atts(array("cid"=>'0'),$atts));
     extract(shortcode_atts(array("page"=>'1'),$atts));
-    $return = '<div class="video-container"><iframe src="//player.bilibili.com/player.html?aid=';
+    $return = '<div class="video-container"><iframe src="//player.bilibili.com/player.html?bvid=';
     $return .= $content;
-    $return .= '&cid=';
     $return .= $cid;
     $return .= '&page=';
     $return .= $page;
@@ -202,15 +268,30 @@ function more_button_b(){
         add_filter('mce_buttons_3','register_button_b');
     }
 }
+function add_more_buttons($buttons){
+    $buttons[] = 'hr';
+    $buttons[] = 'fontselect';
+    $buttons[] = 'fontsizeselect';
+    $buttons[] = 'styleselect';
+    return $buttons;
+}
+add_filter("mce_buttons_2","add_more_buttons");
 function register_button($buttons){
     array_push($buttons," ","title");
     array_push($buttons," ","highlight");
     array_push($buttons," ","block");
     array_push($buttons," ","accordion");
     array_push($buttons," ","hide");
+    array_push($buttons," ","kbd");
+    array_push($buttons," ","mark");
     array_push($buttons," ","striped");
+    array_push($buttons," ","bdbtn");
     array_push($buttons," ","ypbtn");
     array_push($buttons," ","music");
+    array_push($buttons," ","youku");
+    array_push($buttons," ","tudou");
+    array_push($buttons," ","vqq");
+    array_push($buttons," ","youtube");
     array_push($buttons," ","bilibili");
     array_push($buttons," ","wxmusic");
     return $buttons;
@@ -218,9 +299,11 @@ function register_button($buttons){
 function register_button_b($buttons){
     array_push($buttons," ","success");
     array_push($buttons," ","info");
+    array_push($buttons," ","warning");
     array_push($buttons," ","danger");
     array_push($buttons," ","successbox");
     array_push($buttons," ","infoboxs");
+    array_push($buttons," ","warningbox");
     array_push($buttons," ","dangerbox");
     return $buttons;
 }
@@ -230,9 +313,16 @@ function add_plugin($plugin_array){
     $plugin_array['block'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['accordion'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['hide'] = get_bloginfo('template_url').'/inc/buttons/more.js';
+    $plugin_array['kbd'] = get_bloginfo('template_url').'/inc/buttons/more.js';
+    $plugin_array['mark'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['striped'] = get_bloginfo('template_url').'/inc/buttons/more.js';
+    $plugin_array['bdbtn'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['ypbtn'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['music'] = get_bloginfo('template_url').'/inc/buttons/more.js';
+    $plugin_array['youku'] = get_bloginfo('template_url').'/inc/buttons/more.js';
+    $plugin_array['tudou'] = get_bloginfo('template_url').'/inc/buttons/more.js';
+    $plugin_array['vqq'] = get_bloginfo('template_url').'/inc/buttons/more.js';
+    $plugin_array['youtube'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['bilibili'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['wxmusic'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     return $plugin_array;
@@ -240,27 +330,22 @@ function add_plugin($plugin_array){
 function add_plugin_b($plugin_array){
     $plugin_array['success'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['info'] = get_bloginfo('template_url').'/inc/buttons/more.js';
+    $plugin_array['warning'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['danger'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['successbox'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['infoboxs'] = get_bloginfo('template_url').'/inc/buttons/more.js';
+    $plugin_array['warningbox'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['dangerbox'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     return $plugin_array;
 }
-function add_more_buttons($buttons){
-    $buttons[] = 'hr';
-    $buttons[] = 'fontselect';
-    $buttons[] = 'fontsizeselect';
-    $buttons[] = 'styleselect';
-    return $buttons;
-}
-add_filter("mce_buttons_2","add_more_buttons");
+
 
 //显示表情
 function fa_get_wpsmiliestrans(){
     global $wpsmiliestrans;
     $wpsmilies = array_unique($wpsmiliestrans);
-    if(kratos_option('owo_out')) $owodir = bloginfo('template_url'); else $owodir = get_bloginfo('template_directory');
-    foreach($wpsmilies as $alt => $src_path){
+    if(kratos_option('owo_out')) $owodir = 'https://cdn.jsdelivr.net/gh/xgxdmx/blog_resources@master'; else $owodir = get_bloginfo('template_directory');
+    foreach($wpsmilies as $src_path){
         $src_path=$owodir.'/static/images/smilies/'.$src_path;
         $output .= '<a class="add-smily" data-smilies="<img src=\''. $src_path.'\'>"><img src="'.$src_path.'"></a>';
     }
@@ -283,13 +368,16 @@ function appthemes_add_quicktags(){ ?>
             QTags.addButton( ' 红色字体 ', '红色字体 ', '<span style="color: #ff0000;">', '</span>' );
             QTags.addButton( '展开/收缩 ', '展开/收缩 ', '[collapse title="标题内容 "]', '[/collapse]' );
             QTags.addButton( '回复可见 ', '回复可见 ', '[hide reply_to_this="true"]', '[/hide]' );
+            QTags.addButton( '本地下载 ', '本地下载 ', '[bdbtn]', '[/bdbtn]' );
             QTags.addButton( '云盘下载 ', '云盘下载 ', '[ypbtn]', '[/ypbtn]' );
             QTags.addButton( '网易云音乐 ', '网易云音乐 ', '[music autoplay="0"]', '[/music]' );
             QTags.addButton( '绿色背景栏 ', '绿色背景栏 ', '[success]', '[/success]' );
             QTags.addButton( '蓝色背景栏 ', '蓝色背景栏 ', '[info]', '[/info]' );
+            QTags.addButton( '黄色背景栏 ', '黄色背景栏 ', '[warning]', '[/warning]' );
             QTags.addButton( '红色背景栏 ', '红色背景栏 ', '[danger]', '[/danger]' );
             QTags.addButton( '绿色面板 ', '绿色面板 ', '[successbox title="标题内容 "]', '[/successbox]' );
             QTags.addButton( '蓝色面板 ', '蓝色面板 ', '[infobox title="标题内容 "]', '[/infobox]' );
+            QTags.addButton( '黄色面板 ', '黄色面板 ', '[warningbox title="标题内容 "]', '[/warningbox]' );
             QTags.addButton( '红色面板 ', '红色面板 ', '[dangerbox title="标题内容 "]', '[/dangerbox]' );
         }catch(err){}
     </script>
