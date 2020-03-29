@@ -71,7 +71,6 @@
 </footer>
 </div>
 </div>
-
 <?php
 if (! wp_is_mobile() && kratos_option('openlive2d')) {
     echo '<div class="waifu" >
@@ -164,7 +163,6 @@ if (! wp_is_mobile() && kratos_option('openlive2d')) {
         });
     });
 </script>
-
-
 </body>
+<script type="text/javascript" src="<?php echo  bloginfo('template_url').'/static/js/crisp.js';?>" async></script>
 </html>

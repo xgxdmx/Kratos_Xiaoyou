@@ -69,12 +69,13 @@ return $o;
 //Comments face
 add_filter('smilies_src','custom_smilies_src',1,10);
 function custom_smilies_src($img_src,$img,$siteurl){
-    $owodir = get_bloginfo('template_directory');
+    if(kratos_option('owo_out')) $owodir = 'https://cdn.jsdelivr.net/gh/xgxdmx/blog_resources@master'; else $owodir = get_bloginfo('template_directory');
     return $owodir.'/static/images/smilies/'.$img;
 }
 function smilies_reset(){
     global $wpsmiliestrans,$wp_smiliessearch,$wp_version;
-    if(!get_option('use_smilies')||$wp_version<5.4) return;
+    // Wordpress 4.2 表情模块有变动，一下仅支持4.2以上版本
+    if(!get_option('use_smilies')|| $wp_version<4.2) return;
     $wpsmiliestrans = array(
      ':hehe:' => 'tieba/hehe.png',
      ':haha:' => 'tieba/haha.png',

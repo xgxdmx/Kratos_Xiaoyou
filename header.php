@@ -172,6 +172,7 @@ if($_COOKIE['goto_bibo']==1){
       <?php if(kratos_option('animal_load')){?>
           <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/animate.min.css';?>"/>
       <?php }?>
+
   </head>
     <?php flush(); ?>
     <body>

@@ -174,6 +174,12 @@ function optionsframework_options(){
         'std'=>'',
         'type'=>'textarea');
     $options[] = array(
+        'name'=>'表情包','moedog',
+        'desc'=>'从jsdelivr加载主题表情包',
+        'id'=>'owo_out',
+        'std'=>'0',
+        'type'=>'checkbox');
+    $options[] = array(
         'name'=>'特色图片(仅针对新式布局)',
         'desc'=>'选择你喜欢的默认特色图片(留空使用随机图片)',
         'id'=>'default_image',
