@@ -344,7 +344,7 @@ function add_plugin_b($plugin_array){
 function fa_get_wpsmiliestrans(){
     global $wpsmiliestrans;
     $wpsmilies = array_unique($wpsmiliestrans);
-    if(kratos_option('owo_out')) $owodir = 'https://cdn.jsdelivr.net/gh/xgxdmx/blog_resources@master'; else $owodir = get_bloginfo('template_directory');
+    if(kratos_option('owo_out')) $owodir = 'https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest'; else $owodir = get_bloginfo('template_directory');
     foreach($wpsmilies as $src_path){
         $src_path=$owodir.'/static/images/smilies/'.$src_path;
         $output .= '<a class="add-smily" data-smilies="<img src=\''. $src_path.'\'>"><img src="'.$src_path.'"></a>';
