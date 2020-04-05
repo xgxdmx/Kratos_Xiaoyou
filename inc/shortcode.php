@@ -242,7 +242,7 @@ add_shortcode('youtube','youtube');
 function bilibili($atts,$content=null,$code=""){
     extract(shortcode_atts(array("cid"=>'0'),$atts));
     extract(shortcode_atts(array("page"=>'1'),$atts));
-    $return = '<div class="video-container"><iframe src="//player.bilibili.com/player.html?bvid=';
+    $return = '<div class="video-container"><iframe src="https://player.bilibili.com/player.html?high_quality=1&danmaku=1&bvid=';
     $return .= $content;
     $return .= $cid;
     $return .= '&page=';
