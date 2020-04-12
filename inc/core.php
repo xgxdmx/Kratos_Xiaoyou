@@ -209,7 +209,7 @@ function kratos_description(){
     if(is_home()||is_front_page()){echo trim(kratos_option('site_description'));}
     elseif(is_category()){$description = strip_tags(category_description());echo trim($description);}
     elseif(is_single()){ 
-        if(get_the_excerpt()){echo get_the_excerpt();}
+        if(has_excerpt() && get_the_excerpt()){echo get_the_excerpt();}
         else{global $post;$description = trim(str_replace(array("\r\n","\r","\n","　"," ")," ",str_replace("\"","'",strip_tags(do_shortcode($post->post_content)))));echo mb_substr($description,0,220,'utf-8');}
     }
     elseif(is_search()){echo '“';the_search_query();global $wp_query;echo '”'.sprintf('为您找到结果 %s 个',$wp_query->found_posts);}
@@ -452,7 +452,7 @@ function kratos_get_html_sitemap(){
     <meta http-equiv="Cache-Control" content="no-siteapp">
     <meta name="description" content="<?php bloginfo('name'); ?>站点地图">
     <meta name="keywords" content="<?php bloginfo('name'); ?>,站点地图,sitemap">
-    <title><?php bloginfo('name'); ?> | 站点地图 ?></title>
+    <title><?php bloginfo('name'); ?> | 站点地图 </title>
     <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
     <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
     <style>
@@ -562,9 +562,15 @@ function comment_author_link_window(){
 }
 add_filter('get_comment_author_link','comment_author_link_window');
 //Notice ***PLEASE DO NOT EDIT THIS 请不要修改此内容***
-
+function kratos_admin_notice(){
+    global $noticeinfo;
+    $noticeinfo = wp_remote_retrieve_body(wp_remote_get('https://api.fczbl.vip/kratos_notice/?v='.KRATOS_VERSION));
+    if(!is_wp_error($noticeinfo)&&$noticeinfo) $noticeinfo = '<style type="text/css">.about-description a{text-decoration:none}</style><div class="notice notice-info"><p class="about-description">'.$noticeinfo.'</p></div>';
+    if(kratos_option('kratos_notice')=='global'&&current_user_can('manage_options')) echo $noticeinfo;
+}
 function kratos_welcome_notice(){
     global $noticeinfo;
     if(current_user_can('manage_options')) echo $noticeinfo;
 }
-
+add_action('admin_notices','kratos_admin_notice'); 
+if(kratos_option('kratos_notice')=="welcome") add_action('welcome_panel','kratos_welcome_notice');

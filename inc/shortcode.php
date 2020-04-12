@@ -247,7 +247,7 @@ function bilibili($atts,$content=null,$code=""){
     $return .= $cid;
     $return .= '&page=';
     $return .= $page;
-    $return .= '" allowtransparency="true" width="100%" height="498" scrolling="no" frameborder="0" ></iframe></div>';
+    $return .= '" allowtransparency="true" allowfullscreen="true" width="100%" height="498" scrolling="no" frameborder="0" ></iframe></div>';
     return $return;
 }
 add_shortcode('bilibili','bilibili');
@@ -347,7 +347,7 @@ function fa_get_wpsmiliestrans(){
     if(kratos_option('owo_out')) $owodir = 'https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest'; else $owodir = get_bloginfo('template_directory');
     foreach($wpsmilies as $src_path){
         $src_path=$owodir.'/static/images/smilies/'.$src_path;
-        $output .= '<a class="add-smily" data-smilies="<img src=\''. $src_path.'\'>"><img src="'.$src_path.'"></a>';
+        $output .= '<a class="wp-smilies add-smily" data-smilies="<img class=\'wp-smilies\' src=\''. $src_path.'\'>"><img class="wp-smilies" src="'.$src_path.'"></a>';
     }
     return $output;
 }
