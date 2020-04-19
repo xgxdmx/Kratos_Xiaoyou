@@ -23,10 +23,12 @@
     <!--底部信息-->
     <div class="status-webo">
         <ul class="items state">
-            <li class="item-diary fa fa-comment-o" style="border-bottom-left-radius:15px;<?php if($_COOKIE['goto_bibo']==1)echo'width:49.9%'?>">
+            <li class="item-diary" style="border-bottom-left-radius:15px;<?php if($_COOKIE['goto_bibo']==1)echo'width:49.9%'?>">
+                <i class="far fa-comment-dots"></i>
                 <?php echo comments_number('0','1','%').'条评论'; ?>
             </li>
-            <li class="item-diary fa fa-eye" style="border-right:0;border-bottom-right-radius:15px;<?php if($_COOKIE['goto_bibo']==1)echo'width:49.9%'?>">
+            <li class="item-diary" style="border-right:0;border-bottom-right-radius:15px;<?php if($_COOKIE['goto_bibo']==1)echo'width:49.9%'?>">
+                <i class="far fa-eye"></i>
                 <?php echo kratos_get_post_views().'次阅读'; ?>
             </li>
         </ul>

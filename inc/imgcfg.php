@@ -36,9 +36,9 @@ function kratos_banner(){
             };
             $output .= '</div>';
             $output .= '<span class="left carousel-control" href="#slide" role="button" data-slide="prev">';
-            $output .= '<span class="fa fa-chevron-left glyphicon glyphicon-chevron-left"></span></span>';
+            $output .= '<span class="glyphicon glyphicon-chevron-left"><i class="fas fa-chevron-left"></i></span></span>';
             $output .= '<span class="right carousel-control" href="#slide" role="button" data-slide="next">';
-            $output .= '<span class="fa fa-chevron-right glyphicon glyphicon-chevron-right"></span></span></div>';
+            $output .= '<span class="glyphicon glyphicon-chevron-right"><i class="fas fa-chevron-right"></i></span></span></div>';
             update_option('kratos_banners',$output);
         }
     }

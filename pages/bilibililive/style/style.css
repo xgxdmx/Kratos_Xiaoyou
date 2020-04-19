@@ -2260,7 +2260,7 @@ li.item {
 
     /*手机*/
     /*顶部*/
-    .items .item{width:24.795%!important}
+    .items .item{max-width:24.766%!important;}
     div#wrapper {background: #ffffff!important;}
     .big-title {
         top: 111px;

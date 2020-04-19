@@ -114,22 +114,22 @@ if($_COOKIE['goto_bibo']==1){
                                             <div class="modal-body">
                                                 <form action=" " method="post" class="bs-example bs-example-form" role="form" style="text-align: center;">
                                                     <div class="input-group" >
-                                                        <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                                        <span class="input-group-addon"><i class="fas fa-user" aria-hidden="true"></i></span>
                                                         <input type="text" name="webname" class="form-control" placeholder="名字">
                                                     </div>
                                                     <div class="input-group">
-                                                        <span class="input-group-addon"><i class="fa fa-link" aria-hidden="true"></i></span>
+                                                        <span class="input-group-addon"><i class="fas fa-link" aria-hidden="true"></i></span>
                                                         <input type="text" name="web" class="form-control" placeholder="网站地址">
                                                     </div>
                                                     <div class="input-group">
-                                                        <span class="input-group-addon"><i class="fa fa-id-card-o" aria-hidden="true"></i></span>
+                                                        <span class="input-group-addon"><i class="far fa-id-card" aria-hidden="true"></i></span>
                                                         <input type="text" name="introduce" class="form-control" placeholder="个人介绍">
                                                     </div>
                                                     <div class="input-group">
-                                                        <span class="input-group-addon"><i class="fa fa-file-image-o" aria-hidden="true"></i></span>
+                                                        <span class="input-group-addon"><i class="far fa-file-image" aria-hidden="true"></i></span>
                                                         <input type="text" name="avater" class="form-control" placeholder="头像链接"></div>
                                                     <div class="input-group">
-                                                        <span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i> </span>
+                                                        <span class="input-group-addon"><i class="far fa-envelope" aria-hidden="true"></i> </span>
                                                         <input type="text" name="mail" class="form-control" placeholder="你的邮箱(添加后会通过邮箱通知你)">
                                                     </div>
                                                     <button type="submit" name="friend"  class="btn btn-info" style="border-radius: 10px;margin-top: 10px;">提交申请</button>
@@ -156,7 +156,7 @@ if($_COOKIE['goto_bibo']==1){
                 <?php } ?>
             <?php }?>
         </div><?php
-        if(current_user_can('manage_options')&&is_single()||is_page()){ ?><div class="cd-tool text-center"><div class="<?php if(kratos_option('cd_weixin')) echo 'edit-box2 '; ?>edit-box"><?php echo edit_post_link('<span class="fa fa-pencil"></span>'); ?></div></div><?php } ?>
+        if(current_user_can('manage_options')&&is_single()||is_page()){ ?><div class="cd-tool text-center"><div class="<?php if(kratos_option('cd_weixin')) echo 'edit-box2 '; ?>edit-box"><?php echo edit_post_link('<span class="fas fa-pencil-alt"></span>'); ?></div></div><?php } ?>
     </div>
 </div>
 <?php get_footer(); ?>

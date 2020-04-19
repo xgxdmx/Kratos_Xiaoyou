@@ -26,16 +26,16 @@
             <!--底部信息-->
             <div class="status-webo">
                 <ul class="state">
-                    <li  class="item fa fa-calendar">
+                    <li  class="item fas fa-calendar-alt">
                         <?php echo get_the_date(); ?>
                     </li>
-                    <li class="item fa fa-eye">
+                    <li class="item far fa-eye">
                         <?php echo kratos_get_post_views().'次阅读'; ?>
                     </li>
-                    <li class="item  fa fa-commenting-o">
+                    <li class="item  far fa-comment-dots">
                         <?php comments_number('0','1','%');echo '条评论' ?>
                     </li>
-                    <li class="item  fa fa-thumbs-o-up" style="border-right:0">
+                    <li class="item  far fa-thumbs-up" style="border-right:0">
                         <?php if(get_post_meta($post->ID,'love',true)){echo get_post_meta($post->ID,'love',true);}else{echo '0'; } echo '人点赞'; ?>
                     </li>
                 </ul>
@@ -53,16 +53,16 @@
         <h2 class="kratos-entry-title"><a href="<?php the_permalink() ?>"><?php if(is_sticky()) echo '<span style="font-size:25px;color:#f00">[TOP] </span>';the_title() ?></a></h2>
         <div class="kratos-post-meta">
             <span class="pull-left">
-            <a><i class="fa fa-calendar"></i> <?php echo get_the_date(); ?></a>
+            <a><i class="fas fa-calendar-alt"></i> <?php echo get_the_date(); ?></a>
             </span>
             <span class="visible-lg visible-md visible-sm pull-left">
-            <?php $category=get_the_category();if($category) echo '<a href="'.get_category_link($category[0]->term_id).'"><i class="fa fa-folder-open-o"></i> '.$category[0]->cat_name.'</a>'; ?>
-            <a href="<?php the_permalink() ?>#comments"><i class="fa fa-commenting-o"></i> <?php comments_number('0','1','%');echo '条评论' ?></a>
+            <?php $category=get_the_category();if($category) echo '<a href="'.get_category_link($category[0]->term_id).'"><i class="far fa-folder-open"></i> '.$category[0]->cat_name.'</a>'; ?>
+            <a href="<?php the_permalink() ?>#comments"><i class="far fa-comment-dots"></i> <?php comments_number('0','1','%');echo '条评论' ?></a>
             </span>
             <span class="pull-left">
-            <a href="<?php the_permalink() ?>"><i class="fa fa-eye"></i> <?php echo kratos_get_post_views().'次阅读' ?></a>
-            <a href="javascript:;" data-action="love" data-id="<?php the_ID(); ?>" class="Love<?php if(isset($_COOKIE['love_'.$post->ID])) echo ' done';?>"><i class="fa fa-thumbs-o-up"></i> <?php if(get_post_meta($post->ID,'love',true)) echo get_post_meta($post->ID,'love',true); else echo '0';echo '人点赞'; ?></a>
-            <a href="<?php site_url() ?>/?author=<?php the_author_ID() ?>"><i class="fa fa-user"></i> <?php the_author(); ?></a>
+            <a href="<?php the_permalink() ?>"><i class="far fa-eye"></i> <?php echo kratos_get_post_views().'次阅读' ?></a>
+            <a href="javascript:;" data-action="love" data-id="<?php the_ID(); ?>" class="Love<?php if(isset($_COOKIE['love_'.$post->ID])) echo ' done';?>"><i class="far fa-thumbs-up"></i> <?php if(get_post_meta($post->ID,'love',true)) echo get_post_meta($post->ID,'love',true); else echo '0';echo '人点赞'; ?></a>
+            <a href="<?php site_url() ?>/?author=<?php the_author_ID() ?>"><i class="fas fa-user"></i> <?php the_author(); ?></a>
             </span>
         </div>
     </header>
@@ -90,16 +90,16 @@
     </div>
     <div class="kratos-post-meta-new">
         <span class="pull-left">
-            <a><i class="fa fa-calendar"></i> <?php echo get_the_date(); ?></a>
-            <a href="<?php the_permalink() ?>#comments"><i class="fa fa-commenting-o"></i> <?php comments_number('0','1','%');echo '条评论'; ?></a>
+            <a><i class="fas fa-calendar-alt"></i> <?php echo get_the_date(); ?></a>
+            <a href="<?php the_permalink() ?>#comments"><i class="far fa-comment-dots"></i> <?php comments_number('0','1','%');echo '条评论'; ?></a>
         </span>
         <span class="visible-lg visible-md visible-sm pull-left">
-            <a href="<?php the_permalink() ?>"><i class="fa fa-eye"></i> <?php echo kratos_get_post_views().'次阅读'; ?></a>
-            <a href="javascript:;" data-action="love" data-id="<?php the_ID(); ?>" class="Love<?php if(isset($_COOKIE['love_'.$post->ID])) echo ' done';?>"><i class="fa fa-thumbs-o-up"></i> <?php if(get_post_meta($post->ID,'love',true)) echo get_post_meta($post->ID,'love',true); else echo '0';echo '人点赞' ?></a>
-            <a href="<?php site_url() ?>/?author=<?php the_author_ID() ?>"><i class="fa fa-user"></i> <?php the_author(); ?></a>
+            <a href="<?php the_permalink() ?>"><i class="far fa-eye"></i> <?php echo kratos_get_post_views().'次阅读'; ?></a>
+            <a href="javascript:;" data-action="love" data-id="<?php the_ID(); ?>" class="Love<?php if(isset($_COOKIE['love_'.$post->ID])) echo ' done';?>"><i class="far fa-thumbs-up"></i> <?php if(get_post_meta($post->ID,'love',true)) echo get_post_meta($post->ID,'love',true); else echo '0';echo '人点赞' ?></a>
+            <a href="<?php site_url() ?>/?author=<?php the_author_ID() ?>"><i class="fas fa-user"></i> <?php the_author(); ?></a>
         </span>
         <span class="pull-right">
-            <a class="read-more" href="<?php the_permalink() ?>" title="<?php echo '阅读全文' ?>"><?php echo '阅读全文' ?> <i class="fa fa-chevron-circle-right"></i></a>
+            <a class="read-more" href="<?php the_permalink() ?>" title="<?php echo '阅读全文' ?>"><?php echo '阅读全文' ?> <i class="fas fa-chevron-circle-right"></i></a>
         </span>
     </div>
 </div>

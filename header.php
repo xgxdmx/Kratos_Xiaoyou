@@ -57,16 +57,23 @@ if($_COOKIE['goto_bibo']==1){
     <!--仅同源网站发送请求-->
     <meta name="referrer" content="same-origin">
 	<?php if (is_archive() && ($paged > 1) && ($paged < $wp_query->max_num_pages)) { ?>
-    <link rel=”prefetch” href=”<?php echo get_next_posts_page_link(); ?>”>
-    <link rel=”prerender” href=”<?php echo get_next_posts_page_link(); ?>”>
+    <link rel="prefetch" href="<?php echo get_next_posts_page_link(); ?>">
+    <link rel="prerender" href="<?php echo get_next_posts_page_link(); ?>">
     <?php } ?>
     <link rel="icon" type="image/x-icon" href="<?php echo kratos_option('site_ico'); ?>">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/highlight.js@latest/src/highlight.js"></script>
     <title><?php wp_title('-',true,'right'); ?></title>
     <?php wp_head();wp_print_scripts('theme-jq'); ?>
+	<?php if (kratos_option('jsdelivr_css')==1) { ?>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/live2d/waifu.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/css/pages/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/css/pages/main.css">
+    <?php } ?>
+	<?php if (kratos_option('jsdelivr_css')==0) { ?>
+    <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/inc/live2d/waifu.css';?>"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/pages/';?>bilibililive/style/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/pages/';?>bilibililive/style/main.css">
+	<?php } ?>
     <style>
         #offcanvas-menu{background:#3a3f51;top:190px;width:198px;}
     </style>
@@ -110,7 +117,12 @@ if($_COOKIE['goto_bibo']==1){
                     </div>
                 </div>
                 <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/prism.css';?>"/>
-                <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/live2d/waifu.css"/>
+                	<?php if (kratos_option('jsdelivr_css')==1) { ?>
+    					<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/live2d/waifu.css"/>
+    				<?php } ?>
+					<?php if (kratos_option('jsdelivr_css')==0) { ?>
+    					<link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/inc/live2d/waifu.css';?>"/>
+					<?php } ?>
                 <?php if(kratos_option('animal_load')){?>
                     <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/animate.min.css';?>"/>
                 <?php }?>
@@ -150,7 +162,11 @@ if($_COOKIE['goto_bibo']==1){
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/css/pages/style.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.min.js.map"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/highlightjs/highlight.js@latest/src/highlight.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/js/all.min.js"></script>
     
     <title><?php wp_title('-',true,'right'); ?></title>
     <?php wp_head();wp_print_scripts('theme-jq'); ?>
@@ -167,8 +183,13 @@ if($_COOKIE['goto_bibo']==1){
         if(kratos_option('add_css')) echo kratos_option('add_css');
         ?>
     </style>
-      <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/prism.css';?>"/>
-      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/live2d/waifu.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/prism.css';?>"/>
+    <?php if (kratos_option('jsdelivr_css')==1) { ?>
+      	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xgxdmx/blog_resource@latest/live2d/waifu.css"/>
+    <?php } ?>
+	<?php if (kratos_option('jsdelivr_css')==0) { ?>
+    	<link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/inc/live2d/waifu.css';?>"/>
+	<?php } ?>
       <?php if(kratos_option('animal_load')){?>
           <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/animate.min.css';?>"/>
       <?php }?>

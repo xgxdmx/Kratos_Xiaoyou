@@ -272,16 +272,16 @@ $theid=$_REQUEST['id'];
                             <?php if($id) echo "<a href='https://t.bilibili.com/$id' target='_blank'>";?>
                                 <div class="status-webo">
                                     <ul class="items state">
-                                        <li class="item fa fa-share-square-o">
+                                        <li class="item fas fa-share-square">
                                             <?php echo $share ?>
                                         </li>
-                                        <li class="item fa fa-comment-o">
+                                        <li class="item fas fa-comment">
                                             <?php echo $comment ?>
                                         </li>
-                                        <li class="item fa fa-thumbs-o-up">
+                                        <li class="item far fa-thumbs-up">
                                             <?php echo $like ?>
                                         </li>
-                                        <li class="item fa fa-eye" style="border-right:0">
+                                        <li class="item far fa-eye" style="border-right:0">
                                             <?php echo $visited?>
                                         </li>
                                     </ul>

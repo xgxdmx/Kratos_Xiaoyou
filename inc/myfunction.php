@@ -1,7 +1,7 @@
 <?php
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 //把Qplayer集成到主题中
-if(!is_plugin_active('QPlayer/QPlayer.php')) if(kratos_option('openmusicplug')) include ("QPlayer/QPlayer.php");
+if(!is_plugin_active('e-aplayer/index.php')) if(kratos_option('openmusicplugin')) include ("e-aplayer/index.php");
 if(!is_plugin_active('tinymce-advanced/tinymce-advanced.php')) if(kratos_option('open_tinymce')) include ("tinymce-advanced/tinymce-advanced.php");
 /*集成代码美化插件*/
 if(!is_plugin_active('enlighter/Enlighter.php')) if(kratos_option('open_enlighter')) include ("enlighter/Enlighter.php");

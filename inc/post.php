@@ -57,7 +57,7 @@ function custom_password_form(){
                 <img class="post-pwd" src="'.get_template_directory_uri().'/static/images/fingerprint.png"><br />
                 <h4>这是一篇受保护的文章，请输入阅读密码！</h4>
                 <div class="input-group" id="respond">
-                    <div class="input-group-addon"><i class="fa fa-key"></i></div>
+                    <div class="input-group-addon"><i class="fas fa-key"></i></div>
                     <p><input class="form-control" placeholder="输入阅读密码" name="post_password" id="'.$label.'" type="password" size="20"></p>
                 </div>
                 <div class="comment-form" style="margin-top:15px;"><button id="generate" class="btn btn-primary btn-pwd" name="Submit" type="submit">确认</button></div>

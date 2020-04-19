@@ -5,16 +5,16 @@
             <div class="row">
                 <div class="col-md-12 footer-list text-center">
                     <p class="kratos-social-icons"><?php
-                        echo (!kratos_option('social_weibo'))?'':'<a class="weibo-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_weibo').'"><i class="fab fa-weibo"></i></a>';
-                        echo (!kratos_option('social_tweibo'))?'':'<a class="tweibo-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_tweibo').'"><i class="fab fa-tencent-weibo"></i></a>';
-                        echo (!kratos_option('social_mail'))?'':'<a class="mail-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_mail').'"><i class="fas fa-envelope"></i></a>';
-                        echo (!kratos_option('social_twitter'))?'':'<a class="twitter-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_twitter').'"><i class="fab fa-twitter"></i></a>';
-                        echo (!kratos_option('social_facebook'))?'':'<a class="facebook-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_facebook').'"><i class="fab fa-facebook-official"></i></a>';
-                        echo (!kratos_option('social_linkedin'))?'':'<a class="linkedin-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_linkedin').'"><i class="fa fa-linkedin-square"></i></a>';
-                        echo (!kratos_option('social_github'))?'':'<a class="github-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_github').'"><i class="fab fa-github"></i></a>';
+                        echo (!kratos_option('social_weibo'))?'':'<a class="weibo-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_weibo').'"><i class="fab fa-weibo fa-2x" ></i></a>';
+                        echo (!kratos_option('social_tweibo'))?'':'<a class="tweibo-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_tweibo').'"><i class="fab fa-tencent-weibo fa-2x"></i></a>';
+                        echo (!kratos_option('social_mail'))?'':'<a class="mail-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_mail').'"><i class="fas fa-envelope fa-2x"></i></a>';
+                        echo (!kratos_option('social_twitter'))?'':'<a class="twitter-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_twitter').'"><i class="fab fa-twitter fa-2x"></i></a>';
+                        echo (!kratos_option('social_facebook'))?'':'<a class="facebook-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_facebook').'"><i class="fab fa-facebook-official fa-2x"></i></a>';
+                        echo (!kratos_option('social_linkedin'))?'':'<a class="linkedin-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_linkedin').'"><i class="fa fa-linkedin-square fa-2x"></i></a>';
+                        echo (!kratos_option('social_github'))?'':'<a class="github-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_github').'"><i class="fab fa-github fa-2x"></i></a>';
                         echo (!kratos_option('show_rss'))?'':'<a class="rss-tip" title="RSS订阅" target="_blank" rel="nofollow" href="';
                         if(kratos_option('show_rss')){ bloginfo('url');
-                            echo '/feed"><i class="fa fa-rss"></i></a>';}
+                            echo '/feed"><i class="fas fa-rss fa-2x"></i></a>';}
                         //B站logo
                         if(kratos_option('social_bilibili'))
                         {
@@ -35,28 +35,30 @@
                     <div style="margin-bottom: 0.5em;">
                         <a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu" /></a>
                     </div>
-                    <div title="MySSL安全签章" id="myssl_seal">
-                        <img onclick="window.open('https://myssl.com/seal/detail?domain=www.xgxdmx.com','MySSL安全签章','height=800,width=470,top=0,right=0,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no')"  src="https://sealres.myssl.com/seal/img/1x/seal.png?domain=www.xgxdmx.com" alt="www.xgxdmx.com-MySSL安全签章">
+                    <div title="MySSL 安全签章" id="myssl_seal" onclick="window.open('https://myssl.com/seal/detail?domain=www.xgxdmx.com','MySSL安全签章','height=800,width=470,top=0,right=0,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no')" style="text-align: center;display: inline-block;margin: 10px">
+                    	<img src="https://sealres.myssl.com/seal/img/2x/seal.svg?domain=www.xgxdmx.com" alt="MySSL 安全签章" style="width: 100px; height: auto; cursor: pointer"/>
                     </div>
+                    <div title="Vultr" id="Vultr" onclick="window.open('https://www.vultr.com/?ref=8374185-6G')" style="text-align: center;display: inline-block;margin: 10px">
+                    	<img src="https://www.vultr.com/media/logo_ondark.svg" alt="Vultr" style="width: 135px;height: auto;cursor: pointer;"/>
                 </div>
             </div>
         </div>
         <div class="cd-tool text-center">
-            <div class="<?php if(kratos_option('cd_weixin')) echo 'gotop-box2 '; ?>gotop-box"><div class="gotop-btn"><span class="fa fa-chevron-up"></span></div></div>
+            <div class="<?php if(kratos_option('cd_weixin')) echo 'gotop-box2 '; ?>gotop-box"><div class="gotop-btn"><span class=""><i class="fas fa-chevron-up"></i></span></div></div>
             <?php if(kratos_option('cd_weixin')) echo '<div id="wechat-img" class="wechat-img"><span class="fa fa-weixin"></span><div id="wechat-pic"><img src="'.kratos_option('weixin_image').'"></div></div>'; ?>
             <?php if(kratos_option('bibo_open')) {?>
                 <?php if(kratos_option('bibo_pagelink')){?>
                     <div class="bilbili-box">
                         <?php if($_COOKIE['goto_bibo']==1){?>
-                            <a href="<?php echo site_url();?>?style=krato"> <span class="fas fa-exchange-alt"  title="切换风格"></span></a>
+                            <a href="<?php echo site_url();?>?style=krato"> <span class=""  title="切换风格"><i class="fas fa-exchange-alt"></i></span></a>
                         <?php }else{?>
-                            <a href="<?php echo site_url();?>?style=bibo"> <span class="fas fa-exchange-alt"  title="切换风格"></span></a>
+                            <a href="<?php echo site_url();?>?style=bibo"> <span class=""  title="切换风格"><i class="fas fa-exchange-alt"></i></span></a>
                         <?php }?>
                     </div>
                 <?php } ?>
             <?php }?>
             <div class="search-box">
-                <span class="fa fa-search"></span>
+                <span class=""><i class="fas fa-search"></i></span>
                 <form class="search-form" role="search" method="get" id="searchform" action="<?php echo home_url('/'); ?>">
                     <input type="text" name="s" id="search" placeholder="Search..." style="display:none"/>
                 </form>
@@ -80,14 +82,14 @@ if (! wp_is_mobile() && kratos_option('openlive2d')) {
         <canvas id = "live2d" class="live2d" ></canvas >
         <!--工具栏 -->
         <div class="waifu-tool" >
-            <span class="fui-home" ><i class="fa fa-home" aria-hidden="true"></i></span >
-            <span class="fui-chat" ><i class="fa fa-commenting" aria-hidden="true"></i></span >
-            <span class="fui-eye" ><i class="fa fa-refresh" aria-hidden="true"></i></span >
-            <span class="fui-user" ><i class="fa fa-eye" aria-hidden="true"></i></span >
-            <span class="fui-photo" ><i class="fa fa-camera-retro" aria-hidden="true"></i></span >
-            <span class="fui-info-circle" ><i class="fa fa-question-circle" aria-hidden="true"></i></span >
-            <span class="wifu-moon" ><i class="fa fa-moon-o" aria-hidden="true"></i></span >
-            <span class="fui-cross" ><i class="fa fa-times" aria-hidden="true"></i></span >
+            <span class="fui-home" ><i class="fas fa-home" aria-hidden="true"></i></span >
+            <span class="fui-chat" ><i class="fas fa-comments" aria-hidden="true"></i></span >
+            <span class="fui-eye" ><i class="fas fa-sync-alt" aria-hidden="true"></i></span >
+            <span class="fui-user" ><i class="fas fa-eye" aria-hidden="true"></i></span >
+            <span class="fui-photo" ><i class="fas fa-camera-retro" aria-hidden="true"></i></span >
+            <span class="fui-info-circle" ><i class="fas fa-question-circle" aria-hidden="true"></i></span >
+            <span class="wifu-moon" ><i class="fas fa-moon" aria-hidden="true"></i></span >
+            <span class="fui-cross" ><i class="fas fa-times" aria-hidden="true"></i></span >
         </div >
     </div >
     <script src = "';

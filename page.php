@@ -66,9 +66,9 @@
                         <?php if(kratos_option('page_like_donate')||kratos_option('page_share')){ ?>
                         <footer class="kratos-entry-footer clearfix">
                             <div class="post-like-donate text-center clearfix" id="post-like-donate"><?php
-                                if(kratos_option('page_like_donate')) echo '<a href="javascript:;" class="Donate"><i class="fa fa-bitcoin"></i>打赏</a>';
+                                if(kratos_option('page_like_donate')) echo '<a href="javascript:;" class="Donate"><i class="fab fa-bitcoin"></i>&nbsp;打赏</a>';
                                 if(kratos_option('page_share')){
-                                    echo '<a href="javascript:;" class="Share"><i class="fa fa-share-alt"></i>分享</a>';
+                                    echo '<a href="javascript:;" class="Share"><i class="fas fa-share"></i>&nbsp;分享</a>';
                                     require_once(get_template_directory().'/inc/share.php');
                                 } ?>
                             </div>
@@ -90,7 +90,7 @@
                 <?php }?>
             <?php } ?>
         </div><?php
-        if(current_user_can('manage_options')&&is_single()||is_page()){ ?><div class="cd-tool text-center"><div class="<?php if(kratos_option('cd_weixin')) echo 'edit-box2 '; ?>edit-box"><?php echo edit_post_link('<span class="fa fa-pencil"></span>'); ?></div></div><?php } ?>
+        if(current_user_can('manage_options')&&is_single()||is_page()){ ?><div class="cd-tool text-center"><div class="<?php if(kratos_option('cd_weixin')) echo 'edit-box2 '; ?>edit-box"><?php echo edit_post_link('<span class=""><i class="fas fa-pencil-alt"></i></span>'); ?></div></div><?php } ?>
         </div>
     </div>
 <?php if($_COOKIE['goto_bibo']==1){?>

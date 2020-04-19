@@ -6,13 +6,13 @@
                     <h1 class="kratos-entry-title text-center"><?php the_title(); ?></h1>
                     <div class="kratos-post-meta text-center">
                     <span>
-                    <i class="fa fa-calendar"></i> <?php echo get_the_date(); ?>
-                        <i class="fa fa-eye"></i> <?php echo kratos_get_post_views();echo '次阅读'; ?>
-                        <i class="fa fa-bar-chart" aria-hidden="true"></i><?php echo count_words($text);?>
+                    <i class="fas fa-calendar-alt"></i> <?php echo get_the_date(); ?>
+                        <i class="far fa-eye"></i> <?php echo kratos_get_post_views();echo '次阅读'; ?>
+                        <i class="far fa-chart-bar" aria-hidden="true"></i><?php echo count_words($text);?>
                         <span class="hd">
-                    <i class="fa fa-commenting-o"></i> <?php comments_number('0','1','%');echo '条评论'; ?>
-                            <i class="fa fa-thumbs-o-up"></i> <?php if(get_post_meta($post->ID,'love',true)){echo get_post_meta($post->ID,'love',true);}else{echo '0'; }echo '人点赞'; ?>
-                            <i class="fa fa-user"></i> <?php the_author(); ?>
+                    <i class="far fa-comment-dots"></i> <?php comments_number('0','1','%');echo '条评论'; ?>
+                            <i class="far fa-thumbs-up"></i> <?php if(get_post_meta($post->ID,'love',true)){echo get_post_meta($post->ID,'love',true);}else{echo '0'; }echo '人点赞'; ?>
+                            <i class="fas fa-user"></i> <?php the_author(); ?>
                     </span>
                     </span>
                     </div>
@@ -25,16 +25,16 @@
                 <?php } ?>
                 <footer class="kratos-entry-footer clearfix">
                     <div class="post-like-donate text-center clearfix" id="post-like-donate">
-                        <?php if(kratos_option('post_like_donate')) echo '<a href="javascript:;" class="Donate"><i class="fa fa-bitcoin"></i> 打赏</a>'; ?>
-                        <a href="javascript:;" id="btn" data-action="love" data-id="<?php the_ID() ?>" class="Love<?php if(isset($_COOKIE['love_'.$post->ID])) echo ' done';?>"><i class="fa fa-thumbs-o-up"></i> <?php echo '点赞'; ?></a>
+                        <?php if(kratos_option('post_like_donate')) echo '<a href="javascript:;" class="Donate"><i class="fab fa-bitcoin"></i> 打赏</a>'; ?>
+                        <a href="javascript:;" id="btn" data-action="love" data-id="<?php the_ID() ?>" class="Love<?php if(isset($_COOKIE['love_'.$post->ID])) echo ' done';?>"><i class="far fa-thumbs-up"></i> <?php echo '点赞'; ?></a>
                         <?php if(kratos_option('post_share')) {
-                            echo '<a href="javascript:;" class="Share"><i class="fa fa-share-alt"></i>分享</a>';
+                            echo '<a href="javascript:;" class="Share"><i class="fas fa-share-alt"></i>分享</a>';
                             require_once(get_template_directory().'/inc/share.php');
                         } ?>
                     </div>
                     <div class="footer-tag clearfix">
                         <div class="pull-left">
-                            <i class="fa fa-tags"></i>
+                            <i class="fas fa-tags"></i>
                             <?php if(get_the_tags()){the_tags('',' ','');}else{echo '<a>No Tag</a>';}?>
                         </div>
                         <div class="pull-date">
@@ -82,13 +82,13 @@
             <div class="wow lightSpeedIn">
                 <div class="kratos-post-meta text-center">
                     <span>
-                    <i class="fa fa-calendar"></i> <?php echo get_the_date(); ?>
-                    <i class="fa fa-eye"></i> <?php echo kratos_get_post_views();echo '次阅读'; ?>
-                    <i class="fa fa-bar-chart" aria-hidden="true"></i><?php echo count_words($text);?>
+                    <i class="fas fa-calendar-alt"></i> <?php echo get_the_date(); ?>
+                    <i class="far fa-eye"></i> <?php echo kratos_get_post_views();echo '次阅读'; ?>
+                    <i class="far fa-chart-bar" aria-hidden="true"></i><?php echo count_words($text);?>
                     <span class="hd">
-                    <i class="fa fa-commenting-o"></i> <?php comments_number('0','1','%');echo '条评论'; ?>
-                    <i class="fa fa-thumbs-o-up"></i> <?php if(get_post_meta($post->ID,'love',true)){echo get_post_meta($post->ID,'love',true);}else{echo '0'; }echo '人点赞'; ?>
-                    <i class="fa fa-user"></i> <?php the_author(); ?>
+                    <i class="far fa-comment-dots"></i> <?php comments_number('0','1','%');echo '条评论'; ?>
+                    <i class="far fa-thumbs-up"></i> <?php if(get_post_meta($post->ID,'love',true)){echo get_post_meta($post->ID,'love',true);}else{echo '0'; }echo '人点赞'; ?>
+                    <i class="fas fa-user"></i> <?php the_author(); ?>
                     </span>
                     </span>
                 </div>
@@ -104,16 +104,16 @@
             <?php } ?>
             <footer class="kratos-entry-footer clearfix">
                 <div class="post-like-donate text-center clearfix" id="post-like-donate">
-                <?php if(kratos_option('post_like_donate')) echo '<a href="javascript:;" class="Donate"><i class="fa fa-bitcoin"></i> '.'打赏'.'</a>'; ?>
-                   <a href="javascript:;" id="btn" data-action="love" data-id="<?php the_ID() ?>" class="Love<?php if(isset($_COOKIE['love_'.$post->ID])) echo ' done';?>"><i class="fa fa-thumbs-o-up"></i> <?php echo '点赞'; ?></a>
+                <?php if(kratos_option('post_like_donate')) echo '<a href="javascript:;" class="Donate"><i class="fab fa-bitcoin"></i> '.'打赏'.'</a>'; ?>
+                   <a href="javascript:;" id="btn" data-action="love" data-id="<?php the_ID() ?>" class="Love<?php if(isset($_COOKIE['love_'.$post->ID])) echo ' done';?>"><i class="far fa-thumbs-up"></i> <?php echo '点赞'; ?></a>
                 <?php if(kratos_option('post_share')) {
-                    echo '<a href="javascript:;" class="Share"><i class="fa fa-share-alt"></i>分享</a>';
+                    echo '<a href="javascript:;" class="Share"><i class="fas fa-share-alt"></i>分享</a>';
                     require_once(get_template_directory().'/inc/share.php');
                 } ?>
                 </div>
                 <div class="footer-tag clearfix">
                     <div class="pull-left">
-                    <i class="fa fa-tags"></i>
+                    <i class="fas fa-tags"></i>
                     <?php if(get_the_tags()){the_tags('',' ','');}else{echo '<a>No Tag</a>';}?>
                     </div>
                     <div class="pull-date">

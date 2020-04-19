@@ -14,10 +14,10 @@ function most_comm_posts($days=30,$nums=5){
             $title = $topten->post_title;
             $commentcount = $topten->comment_count;
             if($commentcount>=0){
-                $output .= '<a class="list-group-item visible-lg" title="'.$title.'" href="'.get_permalink($postid).'" rel="bookmark"><i class="fa  fa-book"></i> ';
+                $output .= '<a class="list-group-item visible-lg" title="'.$title.'" href="'.get_permalink($postid).'" rel="bookmark"><i class="fas fa-book"></i> ';
                 $output .= strip_tags($title);
                 $output .= '</a>';
-                $output .= '<a class="list-group-item visible-md" title="'.$title.'" href="'.get_permalink($postid).'" rel="bookmark"><i class="fa  fa-book"></i> ';
+                $output .= '<a class="list-group-item visible-md" title="'.$title.'" href="'.get_permalink($postid).'" rel="bookmark"><i class="fas fa-book"></i> ';
                 $output .= strip_tags($title);
                 $output .= '</a>';
             }
@@ -172,14 +172,14 @@ class kratos_widget_about extends WP_Widget {
         <div class="textwidget">
             <div class="widget-admin text-center">
                 <p>
-                    <a href="<?php echo admin_url('/post-new.php'); ?>"><i class="fa fa-pencil"></i>撰写文章</a>
-                    <a class="widget-admin-center" href="<?php echo admin_url('/post-new.php?post_type=page'); ?>"><i class="fa fa-plus"></i>新建页面</a>
-                    <a href="<?php echo admin_url('/edit-comments.php'); ?>"><i class="fa fa-comments"></i>查看评论</a>
+                    <a href="<?php echo admin_url('/post-new.php'); ?>"><i class="fas fa-pencil-alt"></i>&nbsp;撰写文章</a>
+                    <a class="widget-admin-center" href="<?php echo admin_url('/post-new.php?post_type=page'); ?>"><i class="fas fa-plus"></i>&nbsp;新建页面</a>
+                    <a href="<?php echo admin_url('/edit-comments.php'); ?>"><i class="fas fa-comments"></i>&nbsp;查看评论</a>
                 </p>
                 <p>
-                    <a href="<?php echo admin_url('/options-general.php'); ?>"><i class="fa fa-cogs"></i>站点设置</a>
-                    <a class="widget-admin-center" href="<?php echo admin_url('/themes.php?page=kratos'); ?>"><i class="fa fa-cog"></i>主题设置</a>
-                    <a href="<?php echo wp_logout_url($redirect); ?>"><i class="fa fa-sign-out"></i>退出登录</a>
+                    <a href="<?php echo admin_url('/options-general.php'); ?>"><i class="fas fa-cogs"></i>&nbsp;站点设置</a>
+                    <a class="widget-admin-center" href="<?php echo admin_url('/themes.php?page=kratos'); ?>"><i class="fas fa-cog"></i>&nbsp;主题设置</a>
+                    <a href="<?php echo wp_logout_url($redirect); ?>"><i class="fas fa-sign-out-alt"></i>&nbsp;退出登录</a>
                 </p>
             </div>
         </div>
@@ -192,9 +192,9 @@ class kratos_widget_about extends WP_Widget {
         <div class="textwidget">
             <div class="widget-admin text-center">
                 <p>
-                    <a href="<?php echo admin_url('/profile.php'); ?>"><i class="fa fa-pencil"></i>个人资料</a>
-                    <a href="<?php echo admin_url('/'); ?>"><i class="fa fa-dashboard"></i>仪表盘 </a>
-                    <a href="<?php echo wp_logout_url($redirect); ?>"><i class="fa fa-sign-out"></i> 退出登录</a>
+                    <a href="<?php echo admin_url('/profile.php'); ?>"><i class="fas fa-pencil-alt"></i>&nbsp;个人资料</a>
+                    <a href="<?php echo admin_url('/'); ?>"><i class="fas fa-tachometer-alt"></i>&nbsp;仪表盘 </a>
+                    <a href="<?php echo wp_logout_url($redirect); ?>"><i class="fas fa-sign-out-alt"></i>&nbsp;退出登录</a>
                 </p>
             </div>
         </div>
@@ -337,9 +337,9 @@ class kratos_widget_posts extends WP_Widget {
                 <div class="tab-pane fade in active" id="newest">
                     <ul class="list-group">
                         <?php $myposts = get_posts('numberposts='.$number.' & offset=0');foreach($myposts as $post): ?>
-                            <a class="list-group-item visible-lg" title="<?php echo $post->post_title; ?>" href="<?php echo get_permalink($post->ID); ?>" rel="bookmark"><i class="fa  fa-book"></i> <?php echo strip_tags($post->post_title) ?>
+                            <a class="list-group-item visible-lg" title="<?php echo $post->post_title; ?>" href="<?php echo get_permalink($post->ID); ?>" rel="bookmark"><i class="fas fa-book"></i> <?php echo strip_tags($post->post_title) ?>
                             </a>
-                            <a class="list-group-item visible-md" title="<?php echo $post->post_title; ?>" href="<?php echo get_permalink($post->ID); ?>" rel="bookmark"><i class="fa  fa-book"></i> <?php echo strip_tags($post->post_title) ?>
+                            <a class="list-group-item visible-md" title="<?php echo $post->post_title; ?>" href="<?php echo get_permalink($post->ID); ?>" rel="bookmark"><i class="fas fa-book"></i> <?php echo strip_tags($post->post_title) ?>
                             </a>
                         <?php endforeach; ?>
                     </ul>
@@ -352,9 +352,9 @@ class kratos_widget_posts extends WP_Widget {
                 <div class="tab-pane fade" id="rand">
                     <ul class="list-group">
                         <?php $myposts = get_posts('numberposts='.$number.' & offset=0 & orderby=rand');foreach($myposts as $post): ?>
-                            <a class="list-group-item visible-lg" title="<?php echo $post->post_title; ?>" href="<?php echo get_permalink($post->ID); ?>" rel="bookmark"><i class="fa  fa-book"></i> <?php echo strip_tags($post->post_title) ?>
+                            <a class="list-group-item visible-lg" title="<?php echo $post->post_title; ?>" href="<?php echo get_permalink($post->ID); ?>" rel="bookmark"><i class="fas fa-book"></i> <?php echo strip_tags($post->post_title) ?>
                             </a>
-                            <a class="list-group-item visible-md" title="<?php echo $post->post_title; ?>" href="<?php echo get_permalink($post->ID); ?>" rel="bookmark"><i class="fa  fa-book"></i> <?php echo strip_tags($post->post_title) ?>
+                            <a class="list-group-item visible-md" title="<?php echo $post->post_title; ?>" href="<?php echo get_permalink($post->ID); ?>" rel="bookmark"><i class="fas fa-book"></i> <?php echo strip_tags($post->post_title) ?>
                             </a>
                         <?php endforeach; ?>
                     </ul>
