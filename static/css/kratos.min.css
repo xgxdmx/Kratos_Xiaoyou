@@ -362,8 +362,8 @@ user agent stylesheet h2{display:block;font-size:1.5em;margin-block-start:.83em;
 .form-group{margin-bottom:15px}
 .hidden{display:none!important}
 
-.input-group{display:table;border-collapse:separate;margin-top: 8px;width: 100%}
-.input-group-addon{padding:6px 12px;font-size:14px;font-weight:400;line-height:1;color:#555;text-align:center;background-color:#eee;border:1px solid #ccc;width:1%;white-space:nowrap;vertical-align:middle;display:table-cell}
+.input-group{display:inline-table;border-collapse:separate;margin-top: 8px;width: 100%}
+.input-group-addon{padding:11px;font-size:14px;font-weight:400;line-height:1;color:#555;text-align:center;background-color:#eee;border:1px solid #ccc;width:1%;white-space:nowrap;vertical-align:middle;display:table-cell}
 .input-group-addon:first-child{border-right:0;width: 40px;}
 .layui-layer,.layui-layer-shade{position:fixed;pointer-events:auto}
 .layui-layer-shade{top:0;left:0;width:100%;height:100%}
@@ -500,10 +500,10 @@ user agent stylesheet h2{display:block;font-size:1.5em;margin-block-start:.83em;
 #kratos-header-section .sf-menu>li:hover{background:rgba(120,120,120,.6)}
 #kratos-header-section .sf-menu>li{float:left;transition-property:background-color;transition-duration:.2s}
 #kratos-header-section .sf-menu>li>a:hover{color:#fff!important}
-#kratos-header-section .sub-menu{position:absolute;display:none;padding:0;background:rgba(93,93,93,.8);min-width:110px}
+#kratos-header-section .sub-menu{position:absolute;display:none;padding:0;background:rgba(93,93,93,.8);min-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:500px}
 #kratos-header-section .sub-menu a{letter-spacing:0;text-transform:none;padding:10px 15px!important;line-height:20px;color:#fff!important}
 #kratos-header-section .sub-menu a:hover{background:#999}
-#kratos-header-section .sub-menu li a{text-align:center;white-space:nowrap}
+#kratos-header-section .sub-menu li a{text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:500px}
 #kratos-header-section .sub-menu>li>.sub-menu{left:100%;top:0}
 #kratos-header-section .nav-header{position:relative;float:left;width:100%}
 #kratos-header-section.color-banner .sf-menu li:hover>ul{display:block}

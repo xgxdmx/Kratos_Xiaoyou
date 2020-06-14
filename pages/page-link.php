@@ -156,7 +156,7 @@ if($_COOKIE['goto_bibo']==1){
                 <?php } ?>
             <?php }?>
         </div><?php
-        if(current_user_can('manage_options')&&is_single()||is_page()){ ?><div class="cd-tool text-center"><div class="<?php if(kratos_option('cd_weixin')) echo 'edit-box2 '; ?>edit-box"><?php echo edit_post_link('<span class="fas fa-pencil-alt"></span>'); ?></div></div><?php } ?>
+        if(current_user_can('manage_options')&&is_single()||is_page()){ ?><div class="cd-tool text-center"><div class="<?php if(kratos_option('cd_weixin')) echo 'edit-box2 '; ?>edit-box"><?php echo edit_post_link('<span class=""><i class="fas fa-pencil-alt"></i></span>'); ?></div></div><?php } ?>
     </div>
 </div>
 <?php get_footer(); ?>

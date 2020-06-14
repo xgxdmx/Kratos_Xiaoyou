@@ -28,7 +28,7 @@ echo $user_IP;
             </div>
         </div>
         <div class="footer">
-            <br> © <script type="text/javascript">document.write(new Date().getFullYear())</script> <a href="https://prprpr.love" target="_blank">MOEDOG</a>          
+            <br> © <script type="text/javascript">document.write(new Date().getFullYear())</script> <a href="https://prprpr.love" target="_blank">星光下的梦想</a>          
  			<p id="hitokoto">emmmmmm......</p>
  			<script type="text/javascript" src="https://v1.hitokoto.cn/?encode=js&charset=utf-8&select=%23hitokoto"></script>
         </div>

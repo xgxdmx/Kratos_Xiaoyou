@@ -450,5 +450,14 @@ function wpjam_add_scripts() {
     wp_enqueue_script('jquery');
 }
 add_action( 'wp_enqueue_scripts', 'wpjam_add_scripts' );
+//Redis刷新缓存
 
+//发布、更新文章刷新缓存
+add_action('publish_post', 'redis_Refresh_By_Publish', 0);
+//文章单页删除
+add_action('publish_page', 'redis_Refresh_By_page_Publish', 0);
+//提交评论刷新缓存
+add_action('comment_post', 'redis_Refresh_By_Comments',0);
+//审核评论刷新缓存
+add_action('comment_unapproved_to_approved', 'redis_Refresh_By_Approved',0);
 ?>

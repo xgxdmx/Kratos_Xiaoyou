@@ -2,27 +2,27 @@
     <div class="share-group">
         <a href="javascript:;" class="share-plain twitter" onclick="share('qq');" rel="nofollow">
             <div class="icon-wrap">
-                <i class="fa fa-qq"></i>
+                <i class="fab fa-qq"></i>
             </div>
         </a>
         <a href="javascript:;" class="share-plain weixin" onclick="share('qzone');" rel="nofollow">
             <div class="icon-wrap">
-                <i class="fa fa-star"></i>
+                <i class="fas fa-star"></i>
             </div>
         </a>
         <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
             <div class="icon-wrap">
-                <i class="fa fa-weibo"></i>
+                <i class="fab fa-weibo"></i>
             </div>
         </a>
         <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
             <div class="icon-wrap">
-                <i class="fa fa-facebook"></i>
+                <i class="fab fa-facebook"></i>
             </div>
         </a>
         <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
             <div class="icon-wrap">
-                <i class="fa fa-twitter"></i>
+                <i class="fab fa-twitter"></i>
             </div>
         </a>
     </div>
