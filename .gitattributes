@@ -1,1 +1,2 @@
 *.javascript linguist-language=php
+*.js linguist-language=php
