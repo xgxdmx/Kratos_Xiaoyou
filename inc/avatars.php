@@ -2,6 +2,7 @@
 //Replace Gravatar server
 function kratos_get_avatar($avatar){
     $avatar = str_replace(array('www.gravatar.com/avatar','0.gravatar.com/avatar','1.gravatar.com/avatar','2.gravatar.com/avatar','3.gravatar.com/avatar','secure.gravatar.com/avatar'),kratos_option('gravatar_url'),$avatar);
+    $avatar = str_replace("http://", "https://", $avatar);
     return $avatar;
 }
 add_filter('get_avatar','kratos_get_avatar');
