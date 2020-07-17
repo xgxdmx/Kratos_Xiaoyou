@@ -1,7 +1,7 @@
 <?php
 
 
-define('KRATOS_VERSION','3.1.4');
+define('KRATOS_VERSION','3.1.8');
 require(get_template_directory().'/theme-updates/theme-update-checker.php'); //支持主题更新
 $example_update_checker=new ThemeUpdateChecker(
     'kratos',

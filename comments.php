@@ -2,14 +2,14 @@
 <div id="comments" class="comments-area">
     <ol class="comment-list">
     <?php if(have_comments()){ ?>
-        <?php wp_list_comments(array('style'=>'ol','short_ping'=>true,'avatar_size'=>50,)); ?>
+        <?php wp_list_comments(array('style'=>'ol','short_ping'=>true,'avatar_size'=>32,)); ?>
     </ol>
         <?php if(get_comment_pages_count()>1&&get_option('page_comments')){ ?>
             <div id="comments-nav">
                 <?php paginate_comments_links('prev_text=上一页&next_text=下一页');?>
             </div>
         <?php }
-    }else echo '</ol>';
+    } else echo '</ol>';
     $comment_num1=rand(0,9);
     $comment_num2=rand(0,9);
      //echo("<script>console.log('".json_encode($commenter)."');</script>");
