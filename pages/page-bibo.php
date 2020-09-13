@@ -60,8 +60,11 @@ $theid=$_REQUEST['id'];
                                 <span>粉丝数</span></a>
                         </li>
                         <li class="ptnum">
-                            <?php echo $bilibililive->play?>
-                            <span>播放数</span>
+                            <?php 
+                            require_once ("bilibili/bilibiliAnime.php");
+                            $bili=new bilibiliAnime(kratos_option('bilibili_uid'),kratos_option('bilibili_cookie'));
+                            echo $bili->sum?>
+                            <span>追番数</span>
                         </li>
                     </div>
                     <div class="sns master-info wow bounceInLeft">

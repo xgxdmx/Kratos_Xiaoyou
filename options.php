@@ -334,12 +334,6 @@ function optionsframework_options(){
         'std'=>'',
         'type'=>'text');
     $options[] = array(
-        'name'=>'腾讯微博',
-        'desc'=>'连接前要带有 http:// 或者 https:// ',
-        'id'=>'social_tweibo',
-        'std'=>'',
-        'type'=>'text');
-    $options[] = array(
         'name'=>'Twitter',
         'desc'=>'连接前要带有 http:// 或者 https:// ',
         'id'=>'social_twitter',

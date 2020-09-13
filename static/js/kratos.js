@@ -6,6 +6,18 @@ $(function(){
             $('.share-wrap').fadeToggle('slow');
         });
     }
+    var QRCode = function(){
+        $('.qrcode').each(function(index,el){
+            var url = $(this).data('url');
+            if($.fn.qrcode){
+                $(this).qrcode({
+                    text:url,
+                    width:150,
+                    height:150,
+                });
+            }
+        });
+    }
     var sidebaraffix = function(){
         if($('#side-bar').height()&&xb.site_sh){
             if($('#main').height()>$('#side-bar').height()){
@@ -280,6 +292,7 @@ $(function(){
         sidebaraffix();
         showPhotos();
         OwOcfg();
+        QRCode();
     }
     $(function(){
         gotop();
@@ -292,6 +305,7 @@ $(function(){
         donateConfig();
         showlove();
         shareMenu();
+        QRCode();
         OwOcfg();
         wechatpic();
         if($('div').hasClass('aplayer-footer')) APF();
@@ -466,10 +480,9 @@ function createtime(){
     if(String(snum).length==1){snum = '0'+snum;}
     document.getElementById('span_dt_dt').innerHTML = dnum+'天'+hnum+'小时'+mnum+'分'+snum+'秒';
 }
-
 setInterval('createtime()',250);
 //copy
-// if(xb.copy) document.body.oncopy=function(){alert('已复制所选内容。请务必遵守本站条约！');}
+if(xb.copy) document.body.oncopy=function(){alert('已复制所选内容。请务必遵守本站条约！');}
 $(document).on('copy',function(){
     alert('已复制所选内容。请务必遵守本站条约！');
 });

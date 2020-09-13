@@ -11,6 +11,7 @@ class BilibiliLive{
     public $attation;//关注数
     public $fans;//粉丝数
     public $play;//播放数
+    public $likes;//喜欢数
     public $birthday;//生日的月
     public $spacepicture;
     public $archivecount;//动态数目
@@ -34,7 +35,7 @@ class BilibiliLive{
         curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);//这个很关键就是把获取到的数据以文件流的方式返回，而不是直接输出
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             //发送请求头
-            "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4182.0 Safari/537.36",
+            "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4262.0 Safari/537.36",
             "Referer: https://www.bilibili.com/",
         ));
         $info=json_decode(curl_exec($ch),true);
@@ -60,6 +61,7 @@ class BilibiliLive{
         $this->birthday= $info["data"]["birthday"];
         /*还有获取其他的信息*/
         $this->play=$info2['data']['archive']['view'];
+        $this->likes=$info2['data']['likes'];
         $this->attation=$info3['data']['following'];
         $this->fans=$info3['data']['follower'];
         $this->spacepicture=substr($info4['data']['space']['l_img'],stripos( $info4['data']['space']['l_img'],":")+1);
@@ -74,7 +76,7 @@ class BilibiliLive{
         curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);//这个很关键就是把获取到的数据以文件流的方式返回，而不是直接输出
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             //发送请求头
-            "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4182.0 Safari/537.36",
+            "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4262.0 Safari/537.36",
             "Referer: https://www.bilibili.com/",
         ));
         $info=json_decode(curl_exec($ch),true);

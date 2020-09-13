@@ -25,6 +25,15 @@
                 <i class="fab fa-twitter"></i>
             </div>
         </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fab fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" data-url="<?php the_permalink() ?>"></div>
+                <p><?php _e('打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮','moedog'); ?></p>
+            </div>
+        </a>
     </div>
     <script type="text/javascript">
     function share(obj){

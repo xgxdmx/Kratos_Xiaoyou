@@ -113,6 +113,13 @@ function hide($atts,$content=null,$code=""){
     return $content;
 }
 add_shortcode('hide','hide');
+function heimu($atts,$content=null,$code=""){
+    $return = '<span class="heimu">';
+    $return .= $content;
+    $return .= '</span>';
+    return $return;
+}
+add_shortcode('heimu','heimu');
 function successbox($atts,$content=null,$code=""){
     extract(shortcode_atts(array("title"=>'标题内容'),$atts));
     $return = '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title">';
@@ -282,6 +289,7 @@ function register_button($buttons){
     array_push($buttons," ","block");
     array_push($buttons," ","accordion");
     array_push($buttons," ","hide");
+    array_push($buttons," ","heimu");
     array_push($buttons," ","kbd");
     array_push($buttons," ","mark");
     array_push($buttons," ","striped");
@@ -313,6 +321,7 @@ function add_plugin($plugin_array){
     $plugin_array['block'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['accordion'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['hide'] = get_bloginfo('template_url').'/inc/buttons/more.js';
+    $plugin_array['heimu'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['kbd'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['mark'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['striped'] = get_bloginfo('template_url').'/inc/buttons/more.js';

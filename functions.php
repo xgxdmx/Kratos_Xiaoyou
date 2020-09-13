@@ -1,12 +1,12 @@
 <?php
 
 
-define('KRATOS_VERSION','3.1.8');
+define('KRATOS_VERSION','3.1.9');
 require(get_template_directory().'/theme-updates/theme-update-checker.php'); //支持主题更新
-$example_update_checker=new ThemeUpdateChecker(
-    'kratos',
-    'https://xgxdmx.com/theme.json'
-);
+// $example_update_checker=new ThemeUpdateChecker(
+//     'kratos',
+//     'https://xgxdmx.com/theme.json'
+// );
 
 require_once(get_template_directory().'/inc/core.php');
 require_once(get_template_directory().'/inc/shortcode.php');

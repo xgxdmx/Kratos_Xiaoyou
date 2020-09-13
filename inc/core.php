@@ -83,11 +83,11 @@ function kratos_theme_scripts(){
 
     if(!is_admin()){
         wp_enqueue_style('fontawe',$fadir,array(),'latest');
-        wp_enqueue_style('kratos',$url2.'/static/css/kratos.min.css',array(),KRATOS_VERSION);
+        wp_enqueue_style('kratos',$url2.'/static/css/kratos.min.css',array());
         wp_enqueue_script('theme-jq',$jqdir,array(),'latest');
-        wp_enqueue_script('theme',$url2.'/static/js/theme.min.js',array(),KRATOS_VERSION);
-        wp_enqueue_script('kratos',$url2.'/static/js/kratos.js',array(),KRATOS_VERSION);
-        if(kratos_option('page_pjax')) wp_enqueue_script('pjax',$url2.'/static/js/pjax.js',array(),KRATOS_VERSION);
+        wp_enqueue_script('theme',$url2.'/static/js/theme.min.js',array());
+        wp_enqueue_script('kratos',$url2.'/static/js/kratos.js',array());
+        if(kratos_option('page_pjax')) wp_enqueue_script('pjax',$url2.'/static/js/pjax.js',array());
     }
 
     if(kratos_option('site_sa')&&!wp_is_mobile()){if(kratos_option('head_mode')=='pic') $site_sa_h = 61; else $site_sa_h = 103;}
@@ -133,6 +133,10 @@ add_filter('show_admin_bar','__return_false');
 add_action('wp_enqueue_scripts','mt_enqueue_scripts',1);
 // add_filter('rest_enabled','_return_false');
 // add_filter('rest_jsonp_enabled','_return_false');
+remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
+add_action( 'shutdown', function() {
+   while ( @ob_end_flush() );
+} );
 function mt_enqueue_scripts(){wp_deregister_script('jquery');}
 function disable_embeds_init(){
     global $wp;
@@ -560,16 +564,3 @@ function comment_author_link_window(){
     return $return;
 }
 add_filter('get_comment_author_link','comment_author_link_window');
-//Notice ***PLEASE DO NOT EDIT THIS 请不要修改此内容***
-function kratos_admin_notice(){
-    global $noticeinfo;
-    $noticeinfo = wp_remote_retrieve_body(wp_remote_get('https://api.fczbl.vip/kratos_notice/?v='.KRATOS_VERSION));
-    if(!is_wp_error($noticeinfo)&&$noticeinfo) $noticeinfo = '<style type="text/css">.about-description a{text-decoration:none}</style><div class="notice notice-info"><p class="about-description">'.$noticeinfo.'</p></div>';
-    if(kratos_option('kratos_notice')=='global'&&current_user_can('manage_options')) echo $noticeinfo;
-}
-function kratos_welcome_notice(){
-    global $noticeinfo;
-    if(current_user_can('manage_options')) echo $noticeinfo;
-}
-add_action('admin_notices','kratos_admin_notice'); 
-if(kratos_option('kratos_notice')=="welcome") add_action('welcome_panel','kratos_welcome_notice');

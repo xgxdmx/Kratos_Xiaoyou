@@ -6,7 +6,6 @@
                 <div class="col-md-12 footer-list text-center">
                     <p class="kratos-social-icons"><?php
                         echo (!kratos_option('social_weibo'))?'':'<a class="weibo-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_weibo').'"><i class="fab fa-weibo fa-2x" ></i></a>';
-                        echo (!kratos_option('social_tweibo'))?'':'<a class="tweibo-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_tweibo').'"><i class="fab fa-tencent-weibo fa-2x"></i></a>';
                         echo (!kratos_option('social_mail'))?'':'<a class="mail-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_mail').'"><i class="fas fa-envelope fa-2x"></i></a>';
                         echo (!kratos_option('social_twitter'))?'':'<a class="twitter-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_twitter').'"><i class="fab fa-twitter fa-2x"></i></a>';
                         echo (!kratos_option('social_facebook'))?'':'<a class="facebook-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_facebook').'"><i class="fab fa-facebook-official fa-2x"></i></a>';
@@ -25,7 +24,7 @@
 
                     </p>
                     <p> © 2017 - <?php echo date('Y'); ?> <a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a>. All Rights Reserved.<br><?php _e('已在风雨中度过','moedog'); ?> <span id="span_dt_dt">Loading...</span><br>Theme <a href="https://xiaoyou66.com/%e6%9c%ac%e7%ab%99%e4%b8%bb%e9%a2%98%e6%ad%a3%e5%bc%8f%e5%bc%80%e6%ba%90%ef%bc%81/" target="_blank" rel="nofollow">Kratos</a> Made by <a href="https://www.fczbl.vip" target="_blank" rel="nofollow">moedog</a> Modified by <a href="https://xiaoyou66.com" target="_blank" rel="nofollow">XiaoYou</a><?php if(kratos_option('sitemap')) echo ' <br><a href="'.get_option('home').'/sitemap.html" target="_blank">Sitemap</a>'; ?>
-                        <?php if(kratos_option('icp_num')) echo '<br><a href="http://www.miitbeian.gov.cn/" rel="external nofollow" target="_blank">'.kratos_option('icp_num').'</a>';
+                        <?php if(kratos_option('icp_num')) echo '<br><a href="https://beian.miit.gov.cn" rel="external nofollow" target="_blank">'.kratos_option('icp_num').'</a>';
                         if(kratos_option('gov_num')) echo '<br><a href="'.kratos_option('gov_link').'" rel="external nofollow" target="_blank"><i class="govimg"></i>'.kratos_option('gov_num').'</a>'; ?>
                         <br>
                     </p>

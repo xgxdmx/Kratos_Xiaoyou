@@ -360,6 +360,9 @@ user agent stylesheet h2{display:block;font-size:1.5em;margin-block-start:.83em;
 .container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
 .form-control{padding:6px 12px;line-height:1.42857143;width:100%!important;color:#555;z-index:2;float:left}
 .form-group{margin-bottom:15px}
+.heimu,.heimu a,a .heimu{background-color:#252525;color:#252525;text-shadow:none}
+.heimu:hover,.heimu:active{transition:color .13s linear;color:white}
+.heimu:hover a,a:hover .heimu{transition:color .13s linear;color:lightblue}
 .hidden{display:none!important}
 
 .input-group{display:inline-table;border-collapse:separate;margin-top: 8px;width: 100%}
